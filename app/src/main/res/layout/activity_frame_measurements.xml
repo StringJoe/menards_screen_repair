@@ -1,9 +1,111 @@
 <?xml version="1.0" encoding="utf-8"?>
-<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".frameMeasurements">
+    tools:context=".frameMeasurements"
+    android:orientation="vertical"
+    android:background="@color/white">
 
-</androidx.constraintlayout.widget.ConstraintLayout>
+
+
+        <EditText
+            android:id="@+id/screenWidth"
+            android:layout_width="420dp"
+            android:layout_height="75dp"
+            android:hint="Enter Screen Width"
+            android:textColorHint="@color/white"
+            android:background="@color/menards_green"
+            android:textSize="20sp"
+            />
+
+        <EditText
+            android:id="@+id/screenLength"
+            android:layout_width="420dp"
+            android:layout_height="75dp"
+            android:hint="Enter Screen Length"
+            android:textColorHint="@color/white"
+            android:background="@color/menards_green"
+            android:textSize="20sp"
+            android:layout_marginTop="1dp"
+            />
+
+    <androidx.appcompat.widget.AppCompatButton
+        android:id="@+id/bigCornerBtn"
+        android:layout_width="420dp"
+        android:layout_height="75dp"
+        android:background="@color/menards_green"
+        android:text="13/16 Corner"
+        android:textColor="@color/white"
+        android:textSize="20sp"
+        android:layout_marginTop="1dp"
+        />
+
+    <androidx.appcompat.widget.AppCompatButton
+        android:id="@+id/smallCornerBtn"
+        android:layout_width="420dp"
+        android:layout_height="75dp"
+        android:background="@color/menards_green"
+        android:text="3/4 Corner"
+        android:textColor="@color/white"
+        android:textSize="20sp"
+        android:layout_marginTop="1dp"
+        />
+
+    <androidx.appcompat.widget.AppCompatButton
+        android:id="@+id/calcBtn"
+        android:layout_width="420dp"
+        android:layout_height="75dp"
+        android:background="@color/menards_green"
+        android:text="Calculate Size"
+        android:textColor="@color/white"
+        android:textSize="20sp"
+        android:layout_marginTop="1dp"/>
+
+    <androidx.appcompat.widget.AppCompatButton
+        android:id="@+id/resetBtn"
+        android:layout_width="420dp"
+        android:layout_height="75dp"
+        android:background="@color/menards_green"
+        android:text="Reset Values"
+        android:textColor="@color/white"
+        android:textSize="20sp"
+        android:layout_marginTop="1dp"/>
+
+    <TextView
+        android:id="@+id/totalWidth"
+        android:layout_width="420dp"
+        android:layout_height="75dp"
+        android:background="@color/menards_green"
+        android:textColor="@color/white"
+        android:text="Cut width to "
+        android:textSize="20sp"
+        android:layout_marginTop="1dp"
+        />
+
+    <TextView
+        android:id="@+id/totalLength"
+        android:layout_width="420dp"
+        android:layout_height="75dp"
+        android:background="@color/menards_green"
+        android:textColor="@color/white"
+        android:text="Cut Length to "
+        android:textSize="20sp"
+        android:layout_marginTop="1dp"
+        />
+
+    <androidx.appcompat.widget.AppCompatButton
+        android:id="@+id/menuBtn"
+        android:layout_width="150dp"
+        android:layout_height="50dp"
+        android:background="@color/menards_green"
+        android:text="Main Menu"
+        android:textColor="@color/white"
+        android:textSize="20sp"
+        android:layout_gravity="center_horizontal"
+        android:layout_marginTop="75dp"/>
+
+
+
+</LinearLayout>
