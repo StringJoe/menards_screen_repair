@@ -112,8 +112,8 @@ public class frameMeasurements extends AppCompatActivity {
 
                 calculateLengthWidth();
 
-                totalWidth.setText("Cut width to: " + myFormatter.format(width) + " " + myFormatter.format(widthFraction) + "/16\"");
-                totalLength.setText("Cut Length to: " + myFormatter.format(length) + " " + myFormatter.format(lengthFraction) + "/16\"");
+                totalWidth.setText("Width: " + myFormatter.format(width) + " " + myFormatter.format(widthFraction) + "/16\"");
+                totalLength.setText("Length: " + myFormatter.format(length) + " " + myFormatter.format(lengthFraction) + "/16\"");
             }
         });
 

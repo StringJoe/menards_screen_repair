@@ -8,94 +8,107 @@
     android:orientation="vertical"
     android:background="@color/white">
 
-        <LinearLayout
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:orientation="horizontal" >
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:layout_gravity="center_horizontal"
+        android:layout_margin="10dp">
 
-            <EditText
-                android:id="@+id/screenWidth"
-                android:layout_width="270dp"
-                android:layout_height="50dp"
-                android:hint="Enter Screen Width"
-                android:textColorHint="@color/white"
-                android:background="@color/menards_green"
-                android:textSize="20sp"
-                />
+        <EditText
+            android:id="@+id/screenWidth"
+            android:layout_width="200dp"
+            android:layout_height="75dp"
+            android:hint="Enter Screen Width"
+            android:textColorHint="@color/white"
+            android:background="@color/menards_green"
+            android:textSize="20sp"
+            />
 
-            <androidx.appcompat.widget.AppCompatButton
-                android:id="@+id/widthFractionCount"
-                android:layout_width="wrap_content"
-                android:layout_height="75dp"
-                android:text='0/16"'
-                android:textSize="20sp"
-                android:textColor="@color/white"
-                android:background="@color/menards_green"
-                android:layout_marginLeft="1dp"
-                />
-        </LinearLayout>
+        <androidx.appcompat.widget.AppCompatButton
+            android:id="@+id/widthFractionCount"
+            android:layout_width="75dp"
+            android:layout_height="75dp"
+            android:text='0/16"'
+            android:textSize="20sp"
+            android:textColor="@color/white"
+            android:background="@color/menards_green"
+            android:layout_marginLeft="5dp"
+            />
+    </LinearLayout>
 
-        <LinearLayout
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:orientation="horizontal">
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:layout_gravity="center_horizontal"
+        android:layout_margin="10dp">
 
         <EditText
             android:id="@+id/screenLength"
-            android:layout_width="270dp"
+            android:layout_width="200dp"
             android:layout_height="75dp"
             android:hint="Enter Screen Length"
             android:textColorHint="@color/white"
             android:background="@color/menards_green"
             android:textSize="20sp"
-            android:layout_marginTop="1dp"
             />
 
-            <androidx.appcompat.widget.AppCompatButton
-                android:id="@+id/lengthFractionCount"
-                android:layout_width="wrap_content"
-                android:layout_height="75dp"
-                android:text='0/16"'
-                android:textSize="20sp"
-                android:textColor="@color/white"
-                android:background="@color/menards_green"
-                android:layout_marginTop="1dp"
-                android:layout_marginLeft="1dp"
-                />
+        <androidx.appcompat.widget.AppCompatButton
+            android:id="@+id/lengthFractionCount"
+            android:layout_width="75dp"
+            android:layout_height="75dp"
+            android:text='0/16"'
+            android:textSize="20sp"
+            android:textColor="@color/white"
+            android:background="@color/menards_green"
+            android:layout_marginLeft="5dp"
+            />
 
-        </LinearLayout>
+    </LinearLayout>
 
-    <androidx.appcompat.widget.AppCompatButton
-        android:id="@+id/bigCornerBtn"
-        android:layout_width="400dp"
-        android:layout_height="75dp"
-        android:background="@color/menards_green"
-        android:text="13/16 Corner"
-        android:textColor="@color/white"
-        android:textSize="20sp"
-        android:layout_marginTop="1dp"
-        />
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:layout_gravity="center_horizontal"
+        android:layout_margin="5dp"
+        >
 
-    <androidx.appcompat.widget.AppCompatButton
-        android:id="@+id/smallCornerBtn"
-        android:layout_width="420dp"
-        android:layout_height="75dp"
-        android:background="@color/menards_green"
-        android:text="3/4 Corner"
-        android:textColor="@color/white"
-        android:textSize="20sp"
-        android:layout_marginTop="1dp"
-        />
+        <androidx.appcompat.widget.AppCompatButton
+            android:id="@+id/bigCornerBtn"
+            android:layout_width="100dp"
+            android:layout_height="75dp"
+            android:background="@color/menards_green"
+            android:text="13/16 Corner"
+            android:textColor="@color/white"
+            android:textSize="20sp"
+            android:layout_marginTop="1dp"
+            android:layout_gravity="center_horizontal"
+            />
 
-    <androidx.appcompat.widget.AppCompatButton
-        android:id="@+id/calcBtn"
-        android:layout_width="420dp"
-        android:layout_height="75dp"
-        android:background="@color/menards_green"
-        android:text="Calculate Size"
-        android:textColor="@color/white"
-        android:textSize="20sp"
-        android:layout_marginTop="1dp"/>
+        <androidx.appcompat.widget.AppCompatButton
+            android:id="@+id/smallCornerBtn"
+            android:layout_width="100dp"
+            android:layout_height="75dp"
+            android:background="@color/menards_green"
+            android:text="3/4 Corner"
+            android:textColor="@color/white"
+            android:textSize="20sp"
+            android:layout_marginLeft="5dp"
+            android:layout_gravity="center_horizontal"
+            />
+
+        <androidx.appcompat.widget.AppCompatButton
+            android:id="@+id/calcBtn"
+            android:layout_width="150dp"
+            android:layout_height="75dp"
+            android:background="@color/menards_green"
+            android:text="Calculate Size"
+            android:textColor="@color/white"
+            android:textSize="20sp"
+            android:layout_marginLeft="5dp"/>
+    </LinearLayout>
 
     <androidx.appcompat.widget.AppCompatButton
         android:id="@+id/resetBtn"
@@ -107,6 +120,10 @@
         android:textSize="20sp"
         android:layout_marginTop="1dp"/>
 
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation=""
     <TextView
         android:id="@+id/totalWidth"
         android:layout_width="420dp"
