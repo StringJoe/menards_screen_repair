@@ -1,162 +1,168 @@
 <?xml version="1.0" encoding="utf-8"?>
-<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".frameMeasurements"
-    android:orientation="vertical"
-    android:background="@color/white">
+    android:background="@color/white"
+    tools:context=".frameMeasurements">
 
-    <LinearLayout
+    <TextView
+        android:id="@+id/textView"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_horizontal"
+        android:text="Instructions: When entering the width and length, enter a whole number then press the button for the fraction needed (e.g, enter 23 then hit the button, not 23 3/16 or 23.5). then press the button for the corner being used and hit calculate size. Reset the values or press main menu to exit this screen."
+        android:textColor="@color/black"
+        android:textSize="15sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"></TextView>
+
+    <EditText
+        android:id="@+id/screenWidth"
+        android:layout_width="wrap_content"
+        android:layout_height="0dp"
+        android:layout_marginStart="1dp"
+        android:layout_marginTop="10dp"
+        android:layout_marginBottom="7dp"
+        android:background="@color/menards_green"
+        android:hint="Enter Screen Width"
+        android:textColorHint="@color/white"
+        android:textSize="20sp"
+        app:layout_constraintBottom_toTopOf="@+id/screenLength"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textView"></EditText>
+
+    <androidx.appcompat.widget.AppCompatButton
+        android:id="@+id/widthFractionCount"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:orientation="horizontal"
-        android:layout_gravity="center_horizontal"
-        android:layout_margin="10dp">
+        android:layout_marginStart="18dp"
+        android:layout_marginTop="11dp"
+        android:background="@color/menards_green"
+        android:text='0/16"'
+        android:textColor="@color/white"
+        android:textSize="20sp"
+        app:layout_constraintStart_toEndOf="@+id/screenLength"
+        app:layout_constraintTop_toBottomOf="@+id/textView" />
 
-        <EditText
-            android:id="@+id/screenWidth"
-            android:layout_width="200dp"
-            android:layout_height="75dp"
-            android:hint="Enter Screen Width"
-            android:textColorHint="@color/white"
-            android:background="@color/menards_green"
-            android:textSize="20sp"
-            />
-
-        <androidx.appcompat.widget.AppCompatButton
-            android:id="@+id/widthFractionCount"
-            android:layout_width="75dp"
-            android:layout_height="75dp"
-            android:text='0/16"'
-            android:textSize="20sp"
-            android:textColor="@color/white"
-            android:background="@color/menards_green"
-            android:layout_marginLeft="5dp"
-            />
-    </LinearLayout>
-
-    <LinearLayout
+    <EditText
+        android:id="@+id/screenLength"
         android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:orientation="horizontal"
-        android:layout_gravity="center_horizontal"
-        android:layout_margin="10dp">
+        android:layout_height="50dp"
+        android:layout_marginTop="56dp"
+        android:layout_marginBottom="56dp"
+        android:background="@color/menards_green"
+        android:hint="Enter Screen Length"
+        android:textColorHint="@color/white"
+        android:textSize="20sp"
+        app:layout_constraintBottom_toBottomOf="@+id/bigCornerBtn"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/widthFractionCount" />
 
-        <EditText
-            android:id="@+id/screenLength"
-            android:layout_width="200dp"
-            android:layout_height="75dp"
-            android:hint="Enter Screen Length"
-            android:textColorHint="@color/white"
-            android:background="@color/menards_green"
-            android:textSize="20sp"
-            />
-
-        <androidx.appcompat.widget.AppCompatButton
-            android:id="@+id/lengthFractionCount"
-            android:layout_width="75dp"
-            android:layout_height="75dp"
-            android:text='0/16"'
-            android:textSize="20sp"
-            android:textColor="@color/white"
-            android:background="@color/menards_green"
-            android:layout_marginLeft="5dp"
-            />
-
-    </LinearLayout>
-
-    <LinearLayout
+    <androidx.appcompat.widget.AppCompatButton
+        android:id="@+id/lengthFractionCount"
         android:layout_width="wrap_content"
+        android:layout_height="0dp"
+        android:layout_marginTop="57dp"
+        android:layout_marginBottom="58dp"
+        android:background="@color/menards_green"
+        android:text='0/16"'
+        android:textColor="@color/white"
+        android:textSize="20sp"
+        app:layout_constraintBottom_toBottomOf="@+id/bigCornerBtn"
+        app:layout_constraintStart_toStartOf="@+id/widthFractionCount"
+        app:layout_constraintTop_toTopOf="@+id/screenWidth" />
+
+    <androidx.appcompat.widget.AppCompatButton
+        android:id="@+id/bigCornerBtn"
+        android:layout_width="0dp"
         android:layout_height="wrap_content"
-        android:orientation="horizontal"
         android:layout_gravity="center_horizontal"
-        android:layout_margin="5dp"
-        >
+        android:layout_marginTop="66dp"
+        android:background="@color/menards_green"
+        android:text="5/16 Corner"
+        android:textColor="@color/white"
+        android:textSize="20sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/widthFractionCount" />
 
-        <androidx.appcompat.widget.AppCompatButton
-            android:id="@+id/bigCornerBtn"
-            android:layout_width="100dp"
-            android:layout_height="75dp"
-            android:background="@color/menards_green"
-            android:text="13/16 Corner"
-            android:textColor="@color/white"
-            android:textSize="20sp"
-            android:layout_marginTop="1dp"
-            android:layout_gravity="center_horizontal"
-            />
+    <androidx.appcompat.widget.AppCompatButton
+        android:id="@+id/smallCornerBtn"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_horizontal"
+        android:background="@color/menards_green"
+        android:text="7/16 Corner"
+        android:textColor="@color/white"
+        android:textSize="20sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/bigCornerBtn" />
 
-        <androidx.appcompat.widget.AppCompatButton
-            android:id="@+id/smallCornerBtn"
-            android:layout_width="100dp"
-            android:layout_height="75dp"
-            android:background="@color/menards_green"
-            android:text="3/4 Corner"
-            android:textColor="@color/white"
-            android:textSize="20sp"
-            android:layout_marginLeft="5dp"
-            android:layout_gravity="center_horizontal"
-            />
+    <androidx.appcompat.widget.AppCompatButton
+        android:id="@+id/calcBtn"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:background="@color/menards_green"
+        android:text="Calculate Size"
+        android:textColor="@color/white"
+        android:textSize="20sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/smallCornerBtn" />
 
-        <androidx.appcompat.widget.AppCompatButton
-            android:id="@+id/calcBtn"
-            android:layout_width="150dp"
-            android:layout_height="75dp"
-            android:background="@color/menards_green"
-            android:text="Calculate Size"
-            android:textColor="@color/white"
-            android:textSize="20sp"
-            android:layout_marginLeft="5dp"/>
-    </LinearLayout>
+    <TextView
+        android:id="@+id/totalWidth"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="9dp"
+        android:background="@color/menards_green"
+        android:text="Cut width to "
+        android:textColor="@color/white"
+        android:textSize="20sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/calcBtn" />
+
+    <TextView
+        android:id="@+id/totalLength"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        android:background="@color/menards_green"
+        android:text="Cut Length to "
+        android:textColor="@color/white"
+        android:textSize="20sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/totalWidth" />
 
     <androidx.appcompat.widget.AppCompatButton
         android:id="@+id/resetBtn"
-        android:layout_width="420dp"
-        android:layout_height="75dp"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="13dp"
         android:background="@color/menards_green"
         android:text="Reset Values"
         android:textColor="@color/white"
         android:textSize="20sp"
-        android:layout_marginTop="1dp"/>
-
-    <LinearLayout
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:orientation=""
-    <TextView
-        android:id="@+id/totalWidth"
-        android:layout_width="420dp"
-        android:layout_height="75dp"
-        android:background="@color/menards_green"
-        android:textColor="@color/white"
-        android:text="Cut width to "
-        android:textSize="20sp"
-        android:layout_marginTop="1dp"
-        />
-
-    <TextView
-        android:id="@+id/totalLength"
-        android:layout_width="420dp"
-        android:layout_height="75dp"
-        android:background="@color/menards_green"
-        android:textColor="@color/white"
-        android:text="Cut Length to "
-        android:textSize="20sp"
-        android:layout_marginTop="1dp"
-        />
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/totalLength" />
 
     <androidx.appcompat.widget.AppCompatButton
         android:id="@+id/menuBtn"
-        android:layout_width="150dp"
-        android:layout_height="50dp"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
         android:background="@color/menards_green"
         android:text="Main Menu"
         android:textColor="@color/white"
         android:textSize="20sp"
-        android:layout_gravity="center_horizontal"
-        android:layout_marginTop="75dp"/>
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/resetBtn" />
 
-
-
-</LinearLayout>
+</androidx.constraintlayout.widget.ConstraintLayout>

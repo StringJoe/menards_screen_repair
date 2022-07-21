@@ -7,8 +7,11 @@
         <entry key="..\:/android_apps/menards_screen_build/app/src/main/res/layout-normal/activity_frame_measurements.xml" value="0.27447916666666666" />
         <entry key="..\:/android_apps/menards_screen_build/app/src/main/res/layout-normal/activity_main.xml" value="0.27447916666666666" />
         <entry key="..\:/android_apps/menards_screen_build/app/src/main/res/layout-small/activity_frame_measurements.xml" value="0.22530996152201796" />
-        <entry key="..\:/android_apps/menards_screen_build/app/src/main/res/layout/activity_frame_measurements.xml" value="0.22521367521367522" />
-        <entry key="..\:/android_apps/menards_screen_build/app/src/main/res/layout/activity_main.xml" value="0.22245673279864922" />
+        <entry key="..\:/android_apps/menards_screen_build/app/src/main/res/layout-sw320dp/activity_frame_measurements.xml" value="0.2080856123662307" />
+        <entry key="..\:/android_apps/menards_screen_build/app/src/main/res/layout-sw360dp/activity_frame_measurements.xml" value="0.264" />
+        <entry key="..\:/android_apps/menards_screen_build/app/src/main/res/layout-sw480dp/activity_frame_measurements.xml" value="0.205078125" />
+        <entry key="..\:/android_apps/menards_screen_build/app/src/main/res/layout/activity_frame_measurements.xml" value="0.264" />
+        <entry key="..\:/android_apps/menards_screen_build/app/src/main/res/layout/activity_main.xml" value="0.22521367521367522" />
       </map>
     </option>
   </component>
