@@ -98,17 +98,20 @@
         android:text="Cut Length to: "
         android:textColor="@color/white"
         android:textSize="20sp"
-        app:layout_constraintBottom_toTopOf="@+id/textView19"
+        app:layout_constraintBottom_toTopOf="@+id/instructions"
         app:layout_constraintDimensionRatio="1:0.4"
         app:layout_constraintEnd_toEndOf="@id/guide3"
         app:layout_constraintHorizontal_bias="0.5"
         app:layout_constraintStart_toEndOf="@id/guide2"
         app:layout_constraintTop_toBottomOf="@+id/resetBtn" />
 
-    <TextView
-        android:id="@+id/textView19"
+    <androidx.appcompat.widget.AppCompatButton
+        android:id="@+id/instructions"
         android:layout_width="0dp"
         android:layout_height="0dp"
+        android:text="Instructions"
+        android:textColor="@color/white"
+        android:textSize="20sp"
         android:background="@color/menards_green"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintDimensionRatio="1:0.4"

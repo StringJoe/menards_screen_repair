@@ -1,7 +1,9 @@
 package com.joe.menardsscreenrepair;
 
+import androidx.appcompat.app.AlertDialog;
 import androidx.appcompat.app.AppCompatActivity;
 
+import android.content.DialogInterface;
 import android.content.Intent;
 import android.graphics.Color;
 import android.os.Bundle;
@@ -15,8 +17,10 @@ import java.text.Format;
 
 public class frameMeasurements extends AppCompatActivity {
 
+    String message = "5/16 corner is = to 13/16 in long.\n7/16 corner is = to 3/4 in long.\n\nFirst the user should enter a width and length for the frame, and tap the button next to the width and length for the appropriate fraction.\n\nDo not enter a decimal number as the width or length. Then choose a corner size and either press the calculate button or reset the values\n\nTap Main Menu if you want to go back to start screen";
+
     EditText screenWidth, screenLength;
-    Button bigCornerBtn, smallCornerBtn, calcBtn, resetBtn, menuBtn, lengthCountFraction, widthCountFraction;
+    Button bigCornerBtn, smallCornerBtn, calcBtn, resetBtn, menuBtn, lengthCountFraction, widthCountFraction, instructionsBtn;
     TextView totalWidth, totalLength;
 
     double lengthCount, widthCount;
@@ -42,9 +46,17 @@ public class frameMeasurements extends AppCompatActivity {
         calcBtn = findViewById(R.id.calcBtn);
         resetBtn = findViewById(R.id.resetBtn);
         menuBtn = findViewById(R.id.menuBtn);
+        instructionsBtn = findViewById(R.id.instructions);
 
         totalWidth = findViewById(R.id.totalWidth);
         totalLength = findViewById(R.id.totalLength);
+
+        instructionsBtn.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                showDialogMessage();
+            }
+        });
 
         lengthCountFraction.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -199,5 +211,20 @@ public class frameMeasurements extends AppCompatActivity {
         // add the decimals to the width and length values
         width = width + widthCount;
         length = length + lengthCount;
+    }
+
+    public void showDialogMessage()
+    {
+        AlertDialog.Builder alertDialog = new AlertDialog.Builder(this);
+        alertDialog.setTitle("Instructions")
+                .setMessage(message)
+                .setNegativeButton("Exit", new DialogInterface.OnClickListener() {
+                    @Override
+                    public void onClick(DialogInterface dialog, int which) {
+
+                    }
+                })
+                .show();
+        alertDialog.create();
     }
 }
