@@ -5,164 +5,209 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:background="@color/white"
-    tools:context=".frameMeasurements">
+    tools:context=".frameMeasurements"
+    tools:layout_editor_absoluteX="0dp"
+    tools:layout_editor_absoluteY="113dp">
 
-    <TextView
-        android:id="@+id/textView"
-        android:layout_width="0dp"
-        android:layout_height="wrap_content"
-        android:layout_gravity="center_horizontal"
-        android:text="Instructions: When entering the width and length, enter a whole number then press the button for the fraction needed (e.g, enter 23 then hit the button, not 23 3/16 or 23.5). then press the button for the corner being used and hit calculate size. Reset the values or press main menu to exit this screen."
-        android:textColor="@color/black"
-        android:textSize="15sp"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"></TextView>
-
-    <EditText
-        android:id="@+id/screenWidth"
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/guide1"
         android:layout_width="wrap_content"
-        android:layout_height="0dp"
-        android:layout_marginStart="1dp"
-        android:layout_marginTop="10dp"
-        android:layout_marginBottom="7dp"
-        android:background="@color/menards_green"
-        android:hint="Enter Screen Width"
-        android:textColorHint="@color/white"
-        android:textSize="20sp"
-        app:layout_constraintBottom_toTopOf="@+id/screenLength"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/textView"></EditText>
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        app:layout_constraintGuide_percent="0" />
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/guide2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        app:layout_constraintGuide_percent="0.5" />
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/guide3"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        app:layout_constraintGuide_percent="1" />
 
     <androidx.appcompat.widget.AppCompatButton
         android:id="@+id/widthFractionCount"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="18dp"
-        android:layout_marginTop="11dp"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
         android:background="@color/menards_green"
         android:text='0/16"'
         android:textColor="@color/white"
         android:textSize="20sp"
-        app:layout_constraintStart_toEndOf="@+id/screenLength"
-        app:layout_constraintTop_toBottomOf="@+id/textView" />
-
-    <EditText
-        android:id="@+id/screenLength"
-        android:layout_width="wrap_content"
-        android:layout_height="50dp"
-        android:layout_marginTop="56dp"
-        android:layout_marginBottom="56dp"
-        android:background="@color/menards_green"
-        android:hint="Enter Screen Length"
-        android:textColorHint="@color/white"
-        android:textSize="20sp"
-        app:layout_constraintBottom_toBottomOf="@+id/bigCornerBtn"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="@+id/widthFractionCount" />
+        app:layout_constraintBottom_toTopOf="@+id/lengthFractionCount"
+        app:layout_constraintDimensionRatio="1:0.4"
+        app:layout_constraintEnd_toEndOf="@id/guide3"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toEndOf="@id/guide2"
+        app:layout_constraintTop_toTopOf="parent" />
 
     <androidx.appcompat.widget.AppCompatButton
         android:id="@+id/lengthFractionCount"
-        android:layout_width="wrap_content"
+        android:layout_width="0dp"
         android:layout_height="0dp"
-        android:layout_marginTop="57dp"
-        android:layout_marginBottom="58dp"
         android:background="@color/menards_green"
         android:text='0/16"'
         android:textColor="@color/white"
         android:textSize="20sp"
-        app:layout_constraintBottom_toBottomOf="@+id/bigCornerBtn"
-        app:layout_constraintStart_toStartOf="@+id/widthFractionCount"
-        app:layout_constraintTop_toTopOf="@+id/screenWidth" />
-
-    <androidx.appcompat.widget.AppCompatButton
-        android:id="@+id/bigCornerBtn"
-        android:layout_width="0dp"
-        android:layout_height="wrap_content"
-        android:layout_gravity="center_horizontal"
-        android:layout_marginTop="66dp"
-        android:background="@color/menards_green"
-        android:text="5/16 Corner"
-        android:textColor="@color/white"
-        android:textSize="20sp"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintBottom_toTopOf="@+id/smallCornerBtn"
+        app:layout_constraintDimensionRatio="1:0.4"
+        app:layout_constraintEnd_toEndOf="@id/guide3"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toEndOf="@id/guide2"
         app:layout_constraintTop_toBottomOf="@+id/widthFractionCount" />
 
     <androidx.appcompat.widget.AppCompatButton
         android:id="@+id/smallCornerBtn"
         android:layout_width="0dp"
-        android:layout_height="wrap_content"
-        android:layout_gravity="center_horizontal"
+        android:layout_height="0dp"
         android:background="@color/menards_green"
-        android:text="7/16 Corner"
+        android:text='7/16"'
         android:textColor="@color/white"
         android:textSize="20sp"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/bigCornerBtn" />
-
-    <androidx.appcompat.widget.AppCompatButton
-        android:id="@+id/calcBtn"
-        android:layout_width="0dp"
-        android:layout_height="wrap_content"
-        android:background="@color/menards_green"
-        android:text="Calculate Size"
-        android:textColor="@color/white"
-        android:textSize="20sp"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/smallCornerBtn" />
-
-    <TextView
-        android:id="@+id/totalWidth"
-        android:layout_width="0dp"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="9dp"
-        android:background="@color/menards_green"
-        android:text="Cut width to "
-        android:textColor="@color/white"
-        android:textSize="20sp"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/calcBtn" />
-
-    <TextView
-        android:id="@+id/totalLength"
-        android:layout_width="0dp"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="10dp"
-        android:background="@color/menards_green"
-        android:text="Cut Length to "
-        android:textColor="@color/white"
-        android:textSize="20sp"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/totalWidth" />
+        app:layout_constraintBottom_toTopOf="@+id/resetBtn"
+        app:layout_constraintDimensionRatio="1:0.4"
+        app:layout_constraintEnd_toEndOf="@id/guide3"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toEndOf="@id/guide2"
+        app:layout_constraintTop_toBottomOf="@+id/lengthFractionCount" />
 
     <androidx.appcompat.widget.AppCompatButton
         android:id="@+id/resetBtn"
         android:layout_width="0dp"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="13dp"
+        android:layout_height="0dp"
         android:background="@color/menards_green"
         android:text="Reset Values"
         android:textColor="@color/white"
         android:textSize="20sp"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintBottom_toTopOf="@+id/totalLength"
+        app:layout_constraintDimensionRatio="1:0.4"
+        app:layout_constraintEnd_toEndOf="@id/guide3"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toEndOf="@id/guide2"
+        app:layout_constraintTop_toBottomOf="@+id/smallCornerBtn" />
+
+    <TextView
+        android:id="@+id/totalLength"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:background="@color/menards_green"
+        android:text="Cut Length to: "
+        android:textColor="@color/white"
+        android:textSize="20sp"
+        app:layout_constraintBottom_toTopOf="@+id/textView19"
+        app:layout_constraintDimensionRatio="1:0.4"
+        app:layout_constraintEnd_toEndOf="@id/guide3"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toEndOf="@id/guide2"
+        app:layout_constraintTop_toBottomOf="@+id/resetBtn" />
+
+    <TextView
+        android:id="@+id/textView19"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:background="@color/menards_green"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintDimensionRatio="1:0.4"
+        app:layout_constraintEnd_toEndOf="@id/guide3"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toEndOf="@id/guide2"
         app:layout_constraintTop_toBottomOf="@+id/totalLength" />
+
+    <EditText
+        android:id="@+id/screenWidth"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:background="@color/menards_green"
+        android:hint="Enter Screen Width"
+        android:textAlignment="center"
+        android:textColorHint="@color/white"
+        android:textSize="20sp"
+        app:layout_constraintBottom_toTopOf="@+id/screenLength"
+        app:layout_constraintDimensionRatio="1:0.4"
+        app:layout_constraintEnd_toEndOf="@id/guide2"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toEndOf="@id/guide1"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <EditText
+        android:id="@+id/screenLength"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:background="@color/menards_green"
+        android:hint="Enter Screen Length"
+        android:textAlignment="center"
+        android:textColorHint="@color/white"
+        android:textSize="20sp"
+        app:layout_constraintBottom_toTopOf="@+id/bigCornerBtn"
+        app:layout_constraintDimensionRatio="1:0.4"
+        app:layout_constraintEnd_toEndOf="@id/guide2"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toEndOf="@id/guide1"
+        app:layout_constraintTop_toBottomOf="@+id/screenWidth" />
+
+    <androidx.appcompat.widget.AppCompatButton
+        android:id="@+id/bigCornerBtn"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:background="@color/menards_green"
+        android:text="5/16 Corner"
+        android:textAlignment="center"
+        android:textColor="@color/white"
+        android:textSize="20sp"
+        app:layout_constraintBottom_toTopOf="@+id/calcBtn"
+        app:layout_constraintDimensionRatio="1:0.4"
+        app:layout_constraintEnd_toEndOf="@id/guide2"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toEndOf="@id/guide1"
+        app:layout_constraintTop_toBottomOf="@+id/screenLength" />
+
+    <androidx.appcompat.widget.AppCompatButton
+        android:id="@+id/calcBtn"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:background="@color/menards_green"
+        android:text="Calculate Size"
+        android:textColor="@color/white"
+        android:textSize="20sp"
+        app:layout_constraintBottom_toTopOf="@+id/totalWidth"
+        app:layout_constraintDimensionRatio="1:0.4"
+        app:layout_constraintEnd_toEndOf="@id/guide2"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toEndOf="@id/guide1"
+        app:layout_constraintTop_toBottomOf="@+id/bigCornerBtn" />
+
+    <TextView
+        android:id="@+id/totalWidth"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:background="@color/menards_green"
+        android:text="Cut width to: "
+        android:textColor="@color/white"
+        android:textSize="20sp"
+        app:layout_constraintBottom_toTopOf="@+id/menuBtn"
+        app:layout_constraintDimensionRatio="1:0.4"
+        app:layout_constraintEnd_toEndOf="@id/guide2"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toEndOf="@id/guide1"
+        app:layout_constraintTop_toBottomOf="@+id/calcBtn" />
 
     <androidx.appcompat.widget.AppCompatButton
         android:id="@+id/menuBtn"
         android:layout_width="0dp"
-        android:layout_height="wrap_content"
+        android:layout_height="0dp"
         android:background="@color/menards_green"
         android:text="Main Menu"
         android:textColor="@color/white"
         android:textSize="20sp"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/resetBtn" />
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintDimensionRatio="1:0.4"
+        app:layout_constraintEnd_toEndOf="@id/guide2"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toEndOf="@id/guide1"
+        app:layout_constraintTop_toBottomOf="@+id/totalWidth" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>

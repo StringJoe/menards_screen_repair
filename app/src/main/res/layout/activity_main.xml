@@ -12,69 +12,69 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:orientation="vertical"
-        app:layout_constraintGuide_percent="0.35" />
+        app:layout_constraintGuide_percent="0.25" />
 
     <androidx.constraintlayout.widget.Guideline
         android:id="@+id/guideline3"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:orientation="vertical"
-        app:layout_constraintGuide_percent="0.65" />
+        app:layout_constraintGuide_percent="0.75" />
 
-    <androidx.appcompat.widget.AppCompatButton
+    <Button
         android:id="@+id/sizeBtn"
         android:layout_width="0dp"
         android:layout_height="0dp"
         android:layout_marginTop="28dp"
-        android:background="@color/menards_green"
+        android:backgroundTint="@color/menards_green"
         android:text="Screen Size"
         android:textColor="@color/white"
         app:layout_constraintBottom_toTopOf="@+id/costBtn"
-        app:layout_constraintDimensionRatio="1:1"
+        app:layout_constraintDimensionRatio="1:0.5"
         app:layout_constraintEnd_toEndOf="@id/guideline3"
         app:layout_constraintHorizontal_bias="0.5"
         app:layout_constraintStart_toEndOf="@id/guideline2"
         app:layout_constraintTop_toBottomOf="@+id/materialsBtn" />
 
-    <androidx.appcompat.widget.AppCompatButton
+    <Button
         android:id="@+id/materialsBtn"
         android:layout_width="0dp"
         android:layout_height="0dp"
-        android:background="@color/menards_green"
+        android:backgroundTint="@color/menards_green"
         android:text="Screen Materials"
         android:textColor="@color/white"
         app:layout_constraintBottom_toTopOf="@+id/sizeBtn"
-        app:layout_constraintDimensionRatio="1:1"
+        app:layout_constraintDimensionRatio="1:0.5"
         app:layout_constraintEnd_toEndOf="@id/guideline3"
         app:layout_constraintHorizontal_bias="0.5"
         app:layout_constraintStart_toStartOf="@id/guideline2"
         app:layout_constraintTop_toTopOf="parent" />
 
-    <androidx.appcompat.widget.AppCompatButton
+    <Button
         android:id="@+id/costBtn"
         android:layout_width="0dp"
         android:layout_height="0dp"
         android:layout_marginTop="36dp"
-        android:background="@color/menards_green"
+        android:backgroundTint="@color/menards_green"
         android:text="Total Screen Cost"
         android:textColor="@color/white"
         app:layout_constraintBottom_toTopOf="@+id/measurementBtn"
-        app:layout_constraintDimensionRatio="1:1"
+        app:layout_constraintDimensionRatio="1:0.5"
         app:layout_constraintEnd_toEndOf="@id/guideline3"
         app:layout_constraintHorizontal_bias="0.5"
         app:layout_constraintStart_toStartOf="@id/guideline2"
         app:layout_constraintTop_toBottomOf="@+id/sizeBtn" />
 
-    <androidx.appcompat.widget.AppCompatButton
+    <Button
         android:id="@+id/measurementBtn"
         android:layout_width="0dp"
         android:layout_height="0dp"
         android:layout_marginTop="24dp"
-        android:background="@color/menards_green"
+        android:backgroundTint="@color/menards_green"
         android:text="Frame Measurements"
         android:textColor="@color/white"
         app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintDimensionRatio="1:1"
+        app:layout_constraintDimensionRatio="1:0.5"
         app:layout_constraintEnd_toStartOf="@id/guideline3"
         app:layout_constraintHorizontal_bias="0.5"
         app:layout_constraintStart_toEndOf="@id/guideline2"
