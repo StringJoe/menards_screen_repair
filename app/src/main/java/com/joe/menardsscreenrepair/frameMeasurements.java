@@ -45,7 +45,7 @@ public class frameMeasurements extends AppCompatActivity {
         smallCornerBtn = findViewById(R.id.smallCornerBtn);
         calcBtn = findViewById(R.id.calcBtn);
         resetBtn = findViewById(R.id.resetBtn);
-        menuBtn = findViewById(R.id.menuBtn);
+        menuBtn = findViewById(R.id.menuBtn4);
         instructionsBtn = findViewById(R.id.instructions);
 
         totalWidth = findViewById(R.id.totalWidth);

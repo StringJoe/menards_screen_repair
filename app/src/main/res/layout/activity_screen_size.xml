@@ -62,7 +62,7 @@
         android:text="="
         android:textColor="@color/white"
         android:textSize="50sp"
-        app:layout_constraintBottom_toTopOf="@+id/textView"
+        app:layout_constraintBottom_toTopOf="@+id/squareFootage"
         app:layout_constraintDimensionRatio="1:0.3"
         app:layout_constraintEnd_toEndOf="@id/guide2"
         app:layout_constraintHorizontal_bias="0.5"
@@ -70,7 +70,7 @@
         app:layout_constraintTop_toBottomOf="@+id/length" />
 
     <TextView
-        android:id="@+id/textView"
+        android:id="@+id/squareFootage"
         android:layout_width="0dp"
         android:layout_height="0dp"
         android:background="@color/menards_green"
@@ -93,15 +93,15 @@
         android:text="Reset Values"
         android:textColor="@color/white"
         android:textSize="20sp"
-        app:layout_constraintBottom_toTopOf="@+id/mainMenu"
+        app:layout_constraintBottom_toTopOf="@+id/menuBtn1"
         app:layout_constraintDimensionRatio="1:0.3"
         app:layout_constraintEnd_toEndOf="@id/guide2"
         app:layout_constraintHorizontal_bias="0.5"
         app:layout_constraintStart_toEndOf="@id/guide1"
-        app:layout_constraintTop_toBottomOf="@+id/textView" />
+        app:layout_constraintTop_toBottomOf="@+id/squareFootage" />
 
-    <TextView
-        android:id="@+id/mainMenu"
+    <androidx.appcompat.widget.AppCompatButton
+        android:id="@+id/menuBtn1"
         android:layout_width="0dp"
         android:layout_height="0dp"
         android:background="@color/menards_green"
@@ -129,7 +129,7 @@
         app:layout_constraintEnd_toEndOf="@id/guide2"
         app:layout_constraintHorizontal_bias="0.5"
         app:layout_constraintStart_toEndOf="@id/guide1"
-        app:layout_constraintTop_toBottomOf="@+id/mainMenu" />
+        app:layout_constraintTop_toBottomOf="@+id/menuBtn1" />
 
 
 </androidx.constraintlayout.widget.ConstraintLayout>
