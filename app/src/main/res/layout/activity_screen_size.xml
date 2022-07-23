@@ -4,6 +4,132 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:background="@color/white"
     tools:context=".screenSize">
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/guide1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        app:layout_constraintGuide_percent="0.25" />
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/guide2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        app:layout_constraintGuide_percent="0.75" />
+
+    <EditText
+        android:id="@+id/width"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:background="@color/menards_green"
+        android:hint="Enter Width"
+        android:textAlignment="center"
+        android:textColorHint="@color/white"
+        android:textSize="20sp"
+        app:layout_constraintBottom_toTopOf="@+id/length"
+        app:layout_constraintDimensionRatio="1:0.3"
+        app:layout_constraintEnd_toEndOf="@id/guide2"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toEndOf="@id/guide1"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <EditText
+        android:id="@+id/length"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:background="@color/menards_green"
+        android:hint="Enter Length"
+        android:textAlignment="center"
+        android:textColorHint="@color/white"
+        android:textSize="20sp"
+        app:layout_constraintBottom_toTopOf="@+id/equals"
+        app:layout_constraintDimensionRatio="1:0.3"
+        app:layout_constraintEnd_toEndOf="@id/guide2"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toEndOf="@id/guide1"
+        app:layout_constraintTop_toBottomOf="@+id/width" />
+
+    <androidx.appcompat.widget.AppCompatButton
+        android:id="@+id/equals"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:background="@color/menards_green"
+        android:gravity="center_horizontal|center_vertical"
+        android:text="="
+        android:textColor="@color/white"
+        android:textSize="50sp"
+        app:layout_constraintBottom_toTopOf="@+id/textView"
+        app:layout_constraintDimensionRatio="1:0.3"
+        app:layout_constraintEnd_toEndOf="@id/guide2"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toEndOf="@id/guide1"
+        app:layout_constraintTop_toBottomOf="@+id/length" />
+
+    <TextView
+        android:id="@+id/textView"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:background="@color/menards_green"
+        android:gravity="center_vertical|center_horizontal"
+        android:text="Sq Ft: 0"
+        android:textColor="@color/white"
+        android:textSize="20sp"
+        app:layout_constraintBottom_toTopOf="@+id/resetBtn"
+        app:layout_constraintDimensionRatio="1:0.3"
+        app:layout_constraintEnd_toEndOf="@id/guide2"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toEndOf="@id/guide1"
+        app:layout_constraintTop_toBottomOf="@+id/equals" />
+
+    <androidx.appcompat.widget.AppCompatButton
+        android:id="@+id/resetBtn"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:background="@color/menards_green"
+        android:text="Reset Values"
+        android:textColor="@color/white"
+        android:textSize="20sp"
+        app:layout_constraintBottom_toTopOf="@+id/mainMenu"
+        app:layout_constraintDimensionRatio="1:0.3"
+        app:layout_constraintEnd_toEndOf="@id/guide2"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toEndOf="@id/guide1"
+        app:layout_constraintTop_toBottomOf="@+id/textView" />
+
+    <TextView
+        android:id="@+id/mainMenu"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:background="@color/menards_green"
+        android:gravity="center_vertical|center_horizontal"
+        android:text="Main Menu"
+        android:textColor="@color/white"
+        android:textSize="20sp"
+        app:layout_constraintBottom_toTopOf="@+id/screenMaterials"
+        app:layout_constraintDimensionRatio="1:0.3"
+        app:layout_constraintEnd_toEndOf="@id/guide2"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toEndOf="@id/guide1"
+        app:layout_constraintTop_toBottomOf="@+id/resetBtn" />
+
+    <androidx.appcompat.widget.AppCompatButton
+        android:id="@+id/screenMaterials"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:background="@color/menards_green"
+        android:text="Screen Materials"
+        android:textColor="@color/white"
+        android:textSize="20sp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintDimensionRatio="1:0.3"
+        app:layout_constraintEnd_toEndOf="@id/guide2"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toEndOf="@id/guide1"
+        app:layout_constraintTop_toBottomOf="@+id/mainMenu" />
+
 
 </androidx.constraintlayout.widget.ConstraintLayout>
