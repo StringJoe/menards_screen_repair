@@ -25,9 +25,9 @@ public class screenMaterials extends AppCompatActivity implements PopupMenu.OnMe
             spreaderBarClipsQty, pullTabsQty;
 
     // variables to hold count of corner spring spreader etc, quantities
-    int cornerCount, springCount, spreaderBarCount, spreaderBarClipCount, pullTabCount;
+    int cornerCount, springCount, plungerCount, spreaderBarCount, spreaderBarClipCount, pullTabCount;
 
-    double getLargestValue, materialCost;
+    double getLargestValue, materialCost, laborCost, totalCost;
     int perimeter;
 
     @Override
@@ -73,12 +73,88 @@ public class screenMaterials extends AppCompatActivity implements PopupMenu.OnMe
         costScreen.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
+                totalCost = laborCost + materialCost;
                 Intent intent = new Intent(screenMaterials.this, screenCost.class);
+                intent.putExtra("totalCost", totalCost);
                 startActivity(intent);
                 finish();
             }
         });
 
+        cornerQty.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                cornerCount += 1;
+                cornerQty.setText(""+cornerCount);
+                materialCost += 0.2;
+            }
+        });
+
+        springQty.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                springCount += 1;
+                springQty.setText(""+springCount);
+                materialCost += 0.2;
+            }
+        });
+
+        plungerBtn.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                plungerBtn.setText("575-8093");
+            }
+        });
+
+        plungerQty.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                plungerCount += 1;
+                plungerQty.setText(""+plungerCount);
+                materialCost += 0.2;
+            }
+        });
+
+        spreaderBarQty.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                spreaderBarCount += 1;
+                spreaderBarQty.setText(""+spreaderBarCount);
+                materialCost += 3.99;
+            }
+        });
+
+        spreaderBarClipsBtn.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                spreaderBarClipsBtn.setText("575-8048");
+            }
+        });
+
+        spreaderBarClipsQty.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                spreaderBarClipCount += 1;
+                spreaderBarClipsQty.setText(""+spreaderBarClipCount);
+                materialCost += 0.2;
+            }
+        });
+
+        pullTabsBtn.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                pullTabsBtn.setText("575-8027");
+            }
+        });
+
+        pullTabsQty.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                pullTabCount += 1;
+                pullTabsQty.setText(""+pullTabCount);
+                materialCost += 0.2;
+            }
+        });
     }
 
     public void calculateScreenFrameSplineQty()
@@ -86,13 +162,8 @@ public class screenMaterials extends AppCompatActivity implements PopupMenu.OnMe
         Intent intent = getIntent();
         getLargestValue = intent.getDoubleExtra("largestValue", 0);
         perimeter = intent.getIntExtra("perimeter", 0);
+        laborCost = intent.getDoubleExtra("laborCost", 0);
         //splineQty.setText(""+perimeter);
-        /*
-        Intent intent = getIntent();
-        score = intent.getIntExtra("Score", 0);
-        String userScore = String.valueOf(score);
-        result.setText("Your score : " + userScore);
-         */
     }
 
     public void screenMaterial(View v) {

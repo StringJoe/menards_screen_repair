@@ -42,6 +42,7 @@ public class screenSize extends AppCompatActivity {
                 Intent intent = new Intent(screenSize.this, screenMaterials.class);
                 intent.putExtra("largestValue", largestValue);
                 intent.putExtra("perimeter", perimeter);
+                intent.putExtra("laborCost", laborCost);
                 startActivity(intent);
                 finish();
             }
@@ -50,9 +51,8 @@ public class screenSize extends AppCompatActivity {
         mainMenuBtn.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
+                resetValues();
                 Intent intent = new Intent(screenSize.this, MainActivity.class);
-                Intent intent2 = new Intent(screenSize.this, screenMaterials.class);
-                intent2.putExtra("largestValue", largestValue);
                 startActivity(intent);
                 finish();
             }
@@ -68,16 +68,7 @@ public class screenSize extends AppCompatActivity {
         resetBtn.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                screenWidth.setText("");
-                screenLength.setText("");
-                screenWidth.setHint("Enter Width");
-                screenLength.setHint("Enter Length");
-
-                squareFt.setText("Sq ft: ");
-
-                width = 0;
-                length = 0;
-                squareFootage = 0;
+                resetValues();
             }
         });
     }
@@ -135,5 +126,19 @@ public class screenSize extends AppCompatActivity {
 
         squareFt.setText("Sq ft: "+Math.round(squareFootage));
 
+    }
+
+    public void resetValues()
+    {
+        screenWidth.setText("");
+        screenLength.setText("");
+        screenWidth.setHint("Enter Width");
+        screenLength.setHint("Enter Length");
+
+        squareFt.setText("Sq ft: ");
+
+        width = 0;
+        length = 0;
+        squareFootage = 0;
     }
 }
