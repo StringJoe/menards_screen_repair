@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+    <item android:id="@+id/screen1"
+        android:title="Charcoal Fiberglass"/>
+
+    <item android:id="@+id/screen2"
+        android:title="Bright Aluminum"/>
+
+    <item android:id="@+id/screen3"
+        android:title="Charcoal Aluminum"/>
+
+    <item android:id="@+id/screen4"
+        android:title="Charcoal Pet-D-Fence"/>
+</menu>
