@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+    <item android:id="@+id/black1"
+        android:title="Black 0.120"/>
+
+    <item android:id="@+id/black2"
+        android:title="Black 0.130"/>
+
+    <item android:id="@+id/black3"
+        android:title="Black 0.140"/>
+
+    <item android:id="@+id/black4"
+        android:title="Black 0.155"/>
+</menu>
