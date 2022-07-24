@@ -4,6 +4,533 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:background="@color/white"
     tools:context=".screenMaterials">
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/guide1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        app:layout_constraintGuide_percent="0" />
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/guide2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        app:layout_constraintGuide_percent="0.4" />
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/guide3"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        app:layout_constraintGuide_percent="0.80" />
+
+    <androidx.appcompat.widget.AppCompatButton
+        android:id="@+id/resetBtn"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:background="@color/menards_green"
+        android:gravity="center_vertical"
+        android:text="Total Cost"
+        android:textColor="@color/white"
+        android:textSize="20sp"
+        app:layout_constraintDimensionRatio="1:0.3"
+        app:layout_constraintEnd_toEndOf="@id/guide2"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toEndOf="@id/guide1"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_chainStyle="packed" />
+
+    <TextView
+        android:id="@+id/textView"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:background="@color/menards_green"
+        android:gravity="center_vertical"
+        android:text="Material"
+        android:textColor="@color/white"
+        android:textSize="20sp"
+        app:layout_constraintDimensionRatio="1:0.3"
+        app:layout_constraintEnd_toEndOf="@id/guide2"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toEndOf="@id/guide1"
+        tools:layout_editor_absoluteY="59dp" />
+
+    <TextView
+        android:id="@+id/textView2"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:background="@color/menards_green"
+        android:gravity="center_vertical"
+        android:text="Screen"
+        android:textColor="@color/white"
+        android:textSize="20sp"
+        app:layout_constraintDimensionRatio="1:0.3"
+        app:layout_constraintEnd_toEndOf="@id/guide2"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toEndOf="@id/guide1"
+        tools:layout_editor_absoluteY="109dp" />
+
+    <TextView
+        android:id="@+id/textView3"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:background="@color/menards_green"
+        android:gravity="center_vertical"
+        android:text="Frame"
+        android:textColor="@color/white"
+        android:textSize="20sp"
+        app:layout_constraintDimensionRatio="1:0.3"
+        app:layout_constraintEnd_toEndOf="@id/guide2"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toEndOf="@id/guide1"
+        tools:layout_editor_absoluteY="164dp" />
+
+    <TextView
+        android:id="@+id/textView5"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:background="@color/menards_green"
+        android:gravity="center_vertical"
+        android:text="Corners"
+        android:textColor="@color/white"
+        android:textSize="20sp"
+        app:layout_constraintDimensionRatio="1:0.3"
+        app:layout_constraintEnd_toEndOf="@id/guide2"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toEndOf="@id/guide1"
+        tools:layout_editor_absoluteY="285dp" />
+
+    <TextView
+        android:id="@+id/textView6"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:background="@color/menards_green"
+        android:gravity="center_vertical"
+        android:text="Spring Latch"
+        android:textColor="@color/white"
+        android:textSize="20sp"
+        app:layout_constraintDimensionRatio="1:0.3"
+        app:layout_constraintEnd_toEndOf="@id/guide2"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toEndOf="@id/guide1"
+        tools:layout_editor_absoluteY="335dp" />
+
+    <TextView
+        android:id="@+id/textView7"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:background="@color/menards_green"
+        android:gravity="center_vertical"
+        android:text="Plunger Latch"
+        android:textColor="@color/white"
+        android:textSize="20sp"
+        app:layout_constraintDimensionRatio="1:0.3"
+        app:layout_constraintEnd_toEndOf="@id/guide2"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toEndOf="@id/guide1"
+        tools:layout_editor_absoluteY="385dp" />
+
+    <TextView
+        android:id="@+id/textView8"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:background="@color/menards_green"
+        android:gravity="center_vertical"
+        android:text="Spreader Bar"
+        android:textColor="@color/white"
+        android:textSize="20sp"
+        app:layout_constraintDimensionRatio="1:0.3"
+        app:layout_constraintEnd_toEndOf="@id/guide2"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toEndOf="@id/guide1"
+        tools:layout_editor_absoluteY="435dp" />
+
+    <TextView
+        android:id="@+id/textView12"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:background="@color/menards_green"
+        android:gravity="center_vertical"
+        android:text="Spreader Clips"
+        android:textColor="@color/white"
+        android:textSize="20sp"
+        app:layout_constraintDimensionRatio="1:0.3"
+        app:layout_constraintEnd_toEndOf="@id/guide2"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toEndOf="@id/guide1"
+        tools:layout_editor_absoluteY="505dp" />
+
+    <TextView
+        android:id="@+id/textView9"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:background="@color/menards_green"
+        android:gravity="center_vertical"
+        android:text="Pull Tabs"
+        android:textColor="@color/white"
+        android:textSize="20sp"
+        app:layout_constraintDimensionRatio="1:0.3"
+        app:layout_constraintEnd_toEndOf="@id/guide2"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toEndOf="@id/guide1"
+        tools:layout_editor_absoluteY="553dp" />
+
+    <androidx.appcompat.widget.AppCompatButton
+        android:id="@+id/costScreen"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:background="@color/menards_green"
+        android:gravity="center_vertical"
+        android:text="Total Cost"
+        android:textColor="@color/white"
+        android:textSize="20sp"
+        app:layout_constraintBottom_toTopOf="@+id/textView10"
+        app:layout_constraintDimensionRatio="1:0.3"
+        app:layout_constraintEnd_toEndOf="@id/guide3"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toEndOf="@id/guide2"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_chainStyle="packed" />
+
+    <TextView
+        android:id="@+id/textView10"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:background="@color/menards_green"
+        android:gravity="center_vertical"
+        android:text="SKU"
+        android:textColor="@color/white"
+        android:textSize="20sp"
+        app:layout_constraintBottom_toTopOf="@+id/screenBtn"
+        app:layout_constraintDimensionRatio="1:0.3"
+        app:layout_constraintEnd_toEndOf="@id/guide3"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toEndOf="@id/guide2"
+        app:layout_constraintTop_toBottomOf="@+id/costScreen" />
+
+    <androidx.appcompat.widget.AppCompatButton
+        android:id="@+id/screenBtn"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:background="@color/menards_green"
+        android:gravity="center_vertical"
+        android:text="575-"
+        android:textColor="@color/white"
+        android:textSize="20sp"
+        app:layout_constraintBottom_toTopOf="@+id/frameBtn"
+        app:layout_constraintDimensionRatio="1:0.3"
+        app:layout_constraintEnd_toEndOf="@id/guide3"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toEndOf="@id/guide2"
+        app:layout_constraintTop_toBottomOf="@+id/textView10" />
+
+    <androidx.appcompat.widget.AppCompatButton
+        android:id="@+id/frameBtn"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:background="@color/menards_green"
+        android:gravity="center_vertical"
+        android:text="575-"
+        android:textColor="@color/white"
+        android:textSize="20sp"
+        app:layout_constraintBottom_toTopOf="@+id/splineBtn"
+        app:layout_constraintDimensionRatio="1:0.3"
+        app:layout_constraintEnd_toEndOf="@id/guide3"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toEndOf="@id/guide2"
+        app:layout_constraintTop_toBottomOf="@+id/screenBtn" />
+
+    <androidx.appcompat.widget.AppCompatButton
+        android:id="@+id/splineBtn"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:background="@color/menards_green"
+        android:gravity="center_vertical"
+        android:text="575-"
+        android:textColor="@color/white"
+        android:textSize="20sp"
+        app:layout_constraintBottom_toTopOf="@+id/cornerBtn"
+        app:layout_constraintDimensionRatio="1:0.3"
+        app:layout_constraintEnd_toEndOf="@id/guide3"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toEndOf="@id/guide2"
+        app:layout_constraintTop_toBottomOf="@+id/frameBtn" />
+
+    <androidx.appcompat.widget.AppCompatButton
+        android:id="@+id/cornerBtn"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:background="@color/menards_green"
+        android:gravity="center_vertical"
+        android:text="575-"
+        android:textColor="@color/white"
+        android:textSize="20sp"
+        app:layout_constraintBottom_toTopOf="@+id/springBtn"
+        app:layout_constraintDimensionRatio="1:0.3"
+        app:layout_constraintEnd_toEndOf="@id/guide3"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toEndOf="@id/guide2"
+        app:layout_constraintTop_toBottomOf="@+id/splineBtn" />
+
+    <androidx.appcompat.widget.AppCompatButton
+        android:id="@+id/springBtn"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:background="@color/menards_green"
+        android:gravity="center_vertical"
+        android:text="575-"
+        android:textColor="@color/white"
+        android:textSize="20sp"
+        app:layout_constraintBottom_toTopOf="@+id/plungerBtn"
+        app:layout_constraintDimensionRatio="1:0.3"
+        app:layout_constraintEnd_toEndOf="@id/guide3"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toEndOf="@id/guide2"
+        app:layout_constraintTop_toBottomOf="@+id/cornerBtn" />
+
+    <androidx.appcompat.widget.AppCompatButton
+        android:id="@+id/plungerBtn"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:background="@color/menards_green"
+        android:gravity="center_vertical"
+        android:text="575-"
+        android:textColor="@color/white"
+        android:textSize="20sp"
+        app:layout_constraintBottom_toTopOf="@+id/spreaderBarBtn"
+        app:layout_constraintDimensionRatio="1:0.3"
+        app:layout_constraintEnd_toEndOf="@id/guide3"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toEndOf="@id/guide2"
+        app:layout_constraintTop_toBottomOf="@+id/springBtn" />
+
+    <androidx.appcompat.widget.AppCompatButton
+        android:id="@+id/spreaderBarBtn"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:background="@color/menards_green"
+        android:gravity="center_vertical"
+        android:text="575-"
+        android:textColor="@color/white"
+        android:textSize="20sp"
+        app:layout_constraintBottom_toTopOf="@+id/spreaderClipsBtn"
+        app:layout_constraintDimensionRatio="1:0.3"
+        app:layout_constraintEnd_toEndOf="@id/guide3"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toEndOf="@id/guide2"
+        app:layout_constraintTop_toBottomOf="@+id/plungerBtn" />
+
+    <androidx.appcompat.widget.AppCompatButton
+        android:id="@+id/spreaderClipsBtn"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:background="@color/menards_green"
+        android:gravity="center_vertical"
+        android:text="575-"
+        android:textColor="@color/white"
+        android:textSize="20sp"
+        app:layout_constraintBottom_toTopOf="@+id/pullTabsBtn"
+        app:layout_constraintDimensionRatio="1:0.3"
+        app:layout_constraintEnd_toEndOf="@id/guide3"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toEndOf="@id/guide2"
+        app:layout_constraintTop_toBottomOf="@+id/spreaderBarBtn" />
+
+    <androidx.appcompat.widget.AppCompatButton
+        android:id="@+id/pullTabsBtn"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:background="@color/menards_green"
+        android:gravity="center_vertical"
+        android:text="575-"
+        android:textColor="@color/white"
+        android:textSize="20sp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintDimensionRatio="1:0.3"
+        app:layout_constraintEnd_toEndOf="@id/guide3"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toEndOf="@id/guide2"
+        app:layout_constraintTop_toBottomOf="@+id/spreaderClipsBtn" />
+
+    <androidx.appcompat.widget.AppCompatButton
+        android:id="@+id/menuBtn2"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:background="@color/menards_green"
+        android:gravity="center_vertical|center_horizontal"
+        android:text="Menu"
+        android:textColor="@color/white"
+        android:textSize="20sp"
+        app:layout_constraintBottom_toTopOf="@+id/appCompatButton"
+        app:layout_constraintDimensionRatio="1:0.6"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toEndOf="@id/guide3"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_chainStyle="spread_inside" />
+
+    <androidx.appcompat.widget.AppCompatButton
+        android:id="@+id/appCompatButton"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:background="@color/menards_green"
+        android:gravity="center_vertical|center_horizontal"
+        android:text="QTY"
+        android:textColor="@color/white"
+        android:textSize="20sp"
+        app:layout_constraintBottom_toTopOf="@+id/screenQty"
+        app:layout_constraintDimensionRatio="1:0.6"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toEndOf="@id/guide3"
+        app:layout_constraintTop_toBottomOf="@+id/menuBtn2" />
+
+    <androidx.appcompat.widget.AppCompatButton
+        android:id="@+id/screenQty"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:background="@color/menards_green"
+        android:gravity="center_vertical|center_horizontal"
+        android:text="0"
+        android:textColor="@color/white"
+        android:textSize="20sp"
+        app:layout_constraintBottom_toTopOf="@+id/frameQty"
+        app:layout_constraintDimensionRatio="1:0.6"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toEndOf="@id/guide3"
+        app:layout_constraintTop_toBottomOf="@+id/appCompatButton" />
+
+    <androidx.appcompat.widget.AppCompatButton
+        android:id="@+id/frameQty"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:background="@color/menards_green"
+        android:gravity="center_vertical|center_horizontal"
+        android:text="0"
+        android:textColor="@color/white"
+        android:textSize="20sp"
+        app:layout_constraintBottom_toTopOf="@+id/splineQty"
+        app:layout_constraintDimensionRatio="1:0.6"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toEndOf="@id/guide3"
+        app:layout_constraintTop_toBottomOf="@+id/screenQty" />
+
+    <androidx.appcompat.widget.AppCompatButton
+        android:id="@+id/splineQty"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:background="@color/menards_green"
+        android:gravity="center_vertical|center_horizontal"
+        android:text="0"
+        android:textColor="@color/white"
+        android:textSize="20sp"
+        app:layout_constraintBottom_toTopOf="@+id/cornersQty"
+        app:layout_constraintDimensionRatio="1:0.6"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toEndOf="@id/guide3"
+        app:layout_constraintTop_toBottomOf="@+id/frameQty" />
+
+    <androidx.appcompat.widget.AppCompatButton
+        android:id="@+id/cornersQty"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:background="@color/menards_green"
+        android:gravity="center_vertical|center_horizontal"
+        android:text="0"
+        android:textColor="@color/white"
+        android:textSize="20sp"
+        app:layout_constraintBottom_toTopOf="@+id/springQty"
+        app:layout_constraintDimensionRatio="1:0.6"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toEndOf="@id/guide3"
+        app:layout_constraintTop_toBottomOf="@+id/splineQty" />
+
+    <androidx.appcompat.widget.AppCompatButton
+        android:id="@+id/springQty"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:background="@color/menards_green"
+        android:gravity="center_vertical|center_horizontal"
+        android:text="0"
+        android:textColor="@color/white"
+        android:textSize="20sp"
+        app:layout_constraintBottom_toTopOf="@+id/plungerQty"
+        app:layout_constraintDimensionRatio="1:0.6"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toEndOf="@id/guide3"
+        app:layout_constraintTop_toBottomOf="@+id/cornersQty" />
+
+    <androidx.appcompat.widget.AppCompatButton
+        android:id="@+id/plungerQty"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:background="@color/menards_green"
+        android:gravity="center_vertical|center_horizontal"
+        android:text="0"
+        android:textColor="@color/white"
+        android:textSize="20sp"
+        app:layout_constraintBottom_toTopOf="@+id/spreaderBarQty"
+        app:layout_constraintDimensionRatio="1:0.6"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toEndOf="@id/guide3"
+        app:layout_constraintTop_toBottomOf="@+id/springQty" />
+
+    <androidx.appcompat.widget.AppCompatButton
+        android:id="@+id/spreaderBarQty"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:background="@color/menards_green"
+        android:gravity="center_vertical|center_horizontal"
+        android:text="0"
+        android:textColor="@color/white"
+        android:textSize="20sp"
+        app:layout_constraintBottom_toTopOf="@+id/spreadrClipsQty"
+        app:layout_constraintDimensionRatio="1:0.6"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toEndOf="@id/guide3"
+        app:layout_constraintTop_toBottomOf="@+id/plungerQty" />
+
+    <androidx.appcompat.widget.AppCompatButton
+        android:id="@+id/spreadrClipsQty"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:background="@color/menards_green"
+        android:gravity="center_vertical|center_horizontal"
+        android:text="0"
+        android:textColor="@color/white"
+        android:textSize="20sp"
+        app:layout_constraintBottom_toTopOf="@+id/pullTabsQty"
+        app:layout_constraintDimensionRatio="1:0.6"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toEndOf="@id/guide3"
+        app:layout_constraintTop_toBottomOf="@+id/spreaderBarQty" />
+
+    <androidx.appcompat.widget.AppCompatButton
+        android:id="@+id/pullTabsQty"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:background="@color/menards_green"
+        android:gravity="center_vertical|center_horizontal"
+        android:text="0"
+        android:textColor="@color/white"
+        android:textSize="20sp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintDimensionRatio="1:0.6"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toEndOf="@id/guide3"
+        app:layout_constraintTop_toBottomOf="@+id/spreadrClipsQty" />/"
 
 </androidx.constraintlayout.widget.ConstraintLayout>
