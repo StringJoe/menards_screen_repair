@@ -41,6 +41,7 @@ public class screenSize extends AppCompatActivity {
             public void onClick(View v) {
                 Intent intent = new Intent(screenSize.this, screenMaterials.class);
                 intent.putExtra("largestValue", largestValue);
+                intent.putExtra("perimeter", perimeter);
                 startActivity(intent);
                 finish();
             }

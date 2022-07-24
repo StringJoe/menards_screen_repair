@@ -266,7 +266,8 @@
         app:layout_constraintEnd_toEndOf="@id/guide2_1"
         app:layout_constraintHorizontal_bias="0.5"
         app:layout_constraintStart_toEndOf="@id/guide2"
-        app:layout_constraintTop_toBottomOf="@+id/textView10" />
+        app:layout_constraintTop_toBottomOf="@+id/textView10"
+        android:onClick="screenMaterial"/>
 
     <androidx.appcompat.widget.AppCompatButton
         android:id="@+id/frameBtn"
@@ -282,7 +283,8 @@
         app:layout_constraintEnd_toEndOf="@id/guide2_1"
         app:layout_constraintHorizontal_bias="0.5"
         app:layout_constraintStart_toEndOf="@id/guide2"
-        app:layout_constraintTop_toBottomOf="@+id/screenBtn" />
+        app:layout_constraintTop_toBottomOf="@+id/screenBtn"
+        android:onClick="frameMaterial"/>
 
     <androidx.appcompat.widget.AppCompatButton
         android:id="@+id/splineBtn"
@@ -298,7 +300,8 @@
         app:layout_constraintEnd_toEndOf="@id/guide2_1"
         app:layout_constraintHorizontal_bias="0.5"
         app:layout_constraintStart_toEndOf="@id/guide2"
-        app:layout_constraintTop_toBottomOf="@+id/frameBtn" />
+        app:layout_constraintTop_toBottomOf="@+id/frameBtn"
+        android:onClick="splineMaterial"/>
 
     <androidx.appcompat.widget.AppCompatButton
         android:id="@+id/cornerBtn"
@@ -314,7 +317,8 @@
         app:layout_constraintEnd_toEndOf="@id/guide2_1"
         app:layout_constraintHorizontal_bias="0.5"
         app:layout_constraintStart_toEndOf="@id/guide2"
-        app:layout_constraintTop_toBottomOf="@+id/splineBtn" />
+        app:layout_constraintTop_toBottomOf="@+id/splineBtn"
+        android:onClick="cornerMaterial"/>
 
     <androidx.appcompat.widget.AppCompatButton
         android:id="@+id/springBtn"
@@ -330,7 +334,8 @@
         app:layout_constraintEnd_toEndOf="@id/guide2_1"
         app:layout_constraintHorizontal_bias="0.5"
         app:layout_constraintStart_toEndOf="@id/guide2"
-        app:layout_constraintTop_toBottomOf="@+id/cornerBtn" />
+        app:layout_constraintTop_toBottomOf="@+id/cornerBtn"
+        android:onClick="springMaterial"/>
 
     <androidx.appcompat.widget.AppCompatButton
         android:id="@+id/plungerBtn"
@@ -362,7 +367,8 @@
         app:layout_constraintEnd_toEndOf="@id/guide2_1"
         app:layout_constraintHorizontal_bias="0.5"
         app:layout_constraintStart_toEndOf="@id/guide2"
-        app:layout_constraintTop_toBottomOf="@+id/plungerBtn" />
+        app:layout_constraintTop_toBottomOf="@+id/plungerBtn"
+        android:onClick="spreaderBarMaterial"/>
 
     <androidx.appcompat.widget.AppCompatButton
         android:id="@+id/spreaderClipsBtn"
