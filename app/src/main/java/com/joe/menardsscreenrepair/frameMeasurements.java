@@ -31,6 +31,7 @@ public class frameMeasurements extends AppCompatActivity {
     double cornerToSubtract;
 
     Format myFormatter = new DecimalFormat("##");
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
