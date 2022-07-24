@@ -40,6 +40,7 @@ public class screenSize extends AppCompatActivity {
             @Override
             public void onClick(View v) {
                 Intent intent = new Intent(screenSize.this, screenMaterials.class);
+                intent.putExtra("largestValue", largestValue);
                 startActivity(intent);
                 finish();
             }
@@ -49,6 +50,8 @@ public class screenSize extends AppCompatActivity {
             @Override
             public void onClick(View v) {
                 Intent intent = new Intent(screenSize.this, MainActivity.class);
+                Intent intent2 = new Intent(screenSize.this, screenMaterials.class);
+                intent2.putExtra("largestValue", largestValue);
                 startActivity(intent);
                 finish();
             }
