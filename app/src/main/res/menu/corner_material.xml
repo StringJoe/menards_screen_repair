@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+    <item android:id="@+id/item15"
+        android:title="5/16 Aluminum"/>
+
+    <item android:id="@+id/item16"
+        android:title="7/16 Aluminum"/>
+
+    <item android:id="@+id/item17"
+        android:title="5/16 Bronze"/>
+
+    <item android:id="@+id/item18"
+        android:title="7/16 Bronze"/>
+
+    <item android:id="@+id/item19"
+        android:title="5/16 White"/>
+
+    <item android:id="@+id/item20"
+        android:title="7/16 White"/>
+</menu>
