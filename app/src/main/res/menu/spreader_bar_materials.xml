@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+    <item android:id="@+id/bar1"
+        android:title="5/8 Aluminum"/>
+
+    <item android:id="@+id/bar2"
+        android:title="5/8 Bronze"/>
+
+    <item android:id="@+id/bar3"
+        android:title="5/8 White"/>
+</menu>
