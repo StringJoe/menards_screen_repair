@@ -5,7 +5,8 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:background="@color/white"
-    tools:context=".screenMaterials">
+    tools:context=".screenMaterials"
+    android:layout_margin="5dp">
 
     <androidx.constraintlayout.widget.Guideline
         android:id="@+id/guide1"
@@ -15,11 +16,25 @@
         app:layout_constraintGuide_percent="0" />
 
     <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/guide1_2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        app:layout_constraintGuide_percent="0.38"/>
+
+    <androidx.constraintlayout.widget.Guideline
         android:id="@+id/guide2"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:orientation="vertical"
         app:layout_constraintGuide_percent="0.4" />
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/guide2_1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        app:layout_constraintGuide_percent="0.78"/>
 
     <androidx.constraintlayout.widget.Guideline
         android:id="@+id/guide3"
@@ -34,15 +49,16 @@
         android:layout_height="0dp"
         android:background="@color/menards_green"
         android:gravity="center_vertical"
-        android:text="Total Cost"
+        android:text="Reset"
         android:textColor="@color/white"
         android:textSize="20sp"
+        app:layout_constraintBottom_toTopOf="@+id/textView"
         app:layout_constraintDimensionRatio="1:0.3"
-        app:layout_constraintEnd_toEndOf="@id/guide2"
-        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintEnd_toEndOf="@id/guide1_2"
+        app:layout_constraintHorizontal_bias="0.5"
         app:layout_constraintStart_toEndOf="@id/guide1"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_chainStyle="packed" />
+        app:layout_constraintVertical_chainStyle="spread_inside" />
 
     <TextView
         android:id="@+id/textView"
@@ -53,11 +69,12 @@
         android:text="Material"
         android:textColor="@color/white"
         android:textSize="20sp"
+        app:layout_constraintBottom_toTopOf="@+id/textView2"
         app:layout_constraintDimensionRatio="1:0.3"
-        app:layout_constraintEnd_toEndOf="@id/guide2"
-        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintEnd_toEndOf="@id/guide1_2"
+        app:layout_constraintHorizontal_bias="0.5"
         app:layout_constraintStart_toEndOf="@id/guide1"
-        tools:layout_editor_absoluteY="59dp" />
+        app:layout_constraintTop_toBottomOf="@+id/resetBtn" />
 
     <TextView
         android:id="@+id/textView2"
@@ -68,11 +85,12 @@
         android:text="Screen"
         android:textColor="@color/white"
         android:textSize="20sp"
+        app:layout_constraintBottom_toTopOf="@+id/textView3"
         app:layout_constraintDimensionRatio="1:0.3"
-        app:layout_constraintEnd_toEndOf="@id/guide2"
-        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintEnd_toEndOf="@id/guide1_2"
+        app:layout_constraintHorizontal_bias="0.5"
         app:layout_constraintStart_toEndOf="@id/guide1"
-        tools:layout_editor_absoluteY="109dp" />
+        app:layout_constraintTop_toBottomOf="@+id/textView" />
 
     <TextView
         android:id="@+id/textView3"
@@ -83,11 +101,28 @@
         android:text="Frame"
         android:textColor="@color/white"
         android:textSize="20sp"
+        app:layout_constraintBottom_toTopOf="@+id/textView13"
         app:layout_constraintDimensionRatio="1:0.3"
-        app:layout_constraintEnd_toEndOf="@id/guide2"
-        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintEnd_toEndOf="@id/guide1_2"
+        app:layout_constraintHorizontal_bias="0.5"
         app:layout_constraintStart_toEndOf="@id/guide1"
-        tools:layout_editor_absoluteY="164dp" />
+        app:layout_constraintTop_toBottomOf="@+id/textView2" />
+
+    <TextView
+        android:id="@+id/textView13"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:background="@color/menards_green"
+        android:gravity="center_vertical"
+        android:text="Spline"
+        android:textColor="@color/white"
+        android:textSize="20sp"
+        app:layout_constraintBottom_toTopOf="@+id/textView5"
+        app:layout_constraintDimensionRatio="1:0.3"
+        app:layout_constraintEnd_toEndOf="@id/guide1_2"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toEndOf="@id/guide1"
+        app:layout_constraintTop_toBottomOf="@+id/textView3" />
 
     <TextView
         android:id="@+id/textView5"
@@ -98,11 +133,12 @@
         android:text="Corners"
         android:textColor="@color/white"
         android:textSize="20sp"
+        app:layout_constraintBottom_toTopOf="@+id/textView6"
         app:layout_constraintDimensionRatio="1:0.3"
-        app:layout_constraintEnd_toEndOf="@id/guide2"
-        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintEnd_toEndOf="@id/guide1_2"
+        app:layout_constraintHorizontal_bias="0.5"
         app:layout_constraintStart_toEndOf="@id/guide1"
-        tools:layout_editor_absoluteY="285dp" />
+        app:layout_constraintTop_toBottomOf="@+id/textView13" />
 
     <TextView
         android:id="@+id/textView6"
@@ -113,11 +149,12 @@
         android:text="Spring Latch"
         android:textColor="@color/white"
         android:textSize="20sp"
+        app:layout_constraintBottom_toTopOf="@+id/textView7"
         app:layout_constraintDimensionRatio="1:0.3"
-        app:layout_constraintEnd_toEndOf="@id/guide2"
-        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintEnd_toEndOf="@id/guide1_2"
+        app:layout_constraintHorizontal_bias="0.5"
         app:layout_constraintStart_toEndOf="@id/guide1"
-        tools:layout_editor_absoluteY="335dp" />
+        app:layout_constraintTop_toBottomOf="@+id/textView5" />
 
     <TextView
         android:id="@+id/textView7"
@@ -128,11 +165,12 @@
         android:text="Plunger Latch"
         android:textColor="@color/white"
         android:textSize="20sp"
+        app:layout_constraintBottom_toTopOf="@+id/textView8"
         app:layout_constraintDimensionRatio="1:0.3"
-        app:layout_constraintEnd_toEndOf="@id/guide2"
-        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintEnd_toEndOf="@id/guide1_2"
+        app:layout_constraintHorizontal_bias="0.5"
         app:layout_constraintStart_toEndOf="@id/guide1"
-        tools:layout_editor_absoluteY="385dp" />
+        app:layout_constraintTop_toBottomOf="@+id/textView6" />
 
     <TextView
         android:id="@+id/textView8"
@@ -143,11 +181,12 @@
         android:text="Spreader Bar"
         android:textColor="@color/white"
         android:textSize="20sp"
+        app:layout_constraintBottom_toTopOf="@+id/textView12"
         app:layout_constraintDimensionRatio="1:0.3"
-        app:layout_constraintEnd_toEndOf="@id/guide2"
-        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintEnd_toEndOf="@id/guide1_2"
+        app:layout_constraintHorizontal_bias="0.5"
         app:layout_constraintStart_toEndOf="@id/guide1"
-        tools:layout_editor_absoluteY="435dp" />
+        app:layout_constraintTop_toBottomOf="@+id/textView7" />
 
     <TextView
         android:id="@+id/textView12"
@@ -158,11 +197,12 @@
         android:text="Spreader Clips"
         android:textColor="@color/white"
         android:textSize="20sp"
+        app:layout_constraintBottom_toTopOf="@+id/textView9"
         app:layout_constraintDimensionRatio="1:0.3"
-        app:layout_constraintEnd_toEndOf="@id/guide2"
-        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintEnd_toEndOf="@id/guide1_2"
+        app:layout_constraintHorizontal_bias="0.5"
         app:layout_constraintStart_toEndOf="@id/guide1"
-        tools:layout_editor_absoluteY="505dp" />
+        app:layout_constraintTop_toBottomOf="@+id/textView8" />
 
     <TextView
         android:id="@+id/textView9"
@@ -173,11 +213,12 @@
         android:text="Pull Tabs"
         android:textColor="@color/white"
         android:textSize="20sp"
+        app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintDimensionRatio="1:0.3"
-        app:layout_constraintEnd_toEndOf="@id/guide2"
-        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintEnd_toEndOf="@id/guide1_2"
+        app:layout_constraintHorizontal_bias="0.5"
         app:layout_constraintStart_toEndOf="@id/guide1"
-        tools:layout_editor_absoluteY="553dp" />
+        app:layout_constraintTop_toBottomOf="@+id/textView12" />
 
     <androidx.appcompat.widget.AppCompatButton
         android:id="@+id/costScreen"
@@ -190,11 +231,11 @@
         android:textSize="20sp"
         app:layout_constraintBottom_toTopOf="@+id/textView10"
         app:layout_constraintDimensionRatio="1:0.3"
-        app:layout_constraintEnd_toEndOf="@id/guide3"
+        app:layout_constraintEnd_toEndOf="@id/guide2_1"
         app:layout_constraintHorizontal_bias="0.5"
         app:layout_constraintStart_toEndOf="@id/guide2"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_chainStyle="packed" />
+        app:layout_constraintVertical_chainStyle="spread_inside" />
 
     <TextView
         android:id="@+id/textView10"
@@ -207,7 +248,7 @@
         android:textSize="20sp"
         app:layout_constraintBottom_toTopOf="@+id/screenBtn"
         app:layout_constraintDimensionRatio="1:0.3"
-        app:layout_constraintEnd_toEndOf="@id/guide3"
+        app:layout_constraintEnd_toEndOf="@id/guide2_1"
         app:layout_constraintHorizontal_bias="0.5"
         app:layout_constraintStart_toEndOf="@id/guide2"
         app:layout_constraintTop_toBottomOf="@+id/costScreen" />
@@ -223,7 +264,7 @@
         android:textSize="20sp"
         app:layout_constraintBottom_toTopOf="@+id/frameBtn"
         app:layout_constraintDimensionRatio="1:0.3"
-        app:layout_constraintEnd_toEndOf="@id/guide3"
+        app:layout_constraintEnd_toEndOf="@id/guide2_1"
         app:layout_constraintHorizontal_bias="0.5"
         app:layout_constraintStart_toEndOf="@id/guide2"
         app:layout_constraintTop_toBottomOf="@+id/textView10" />
@@ -239,7 +280,7 @@
         android:textSize="20sp"
         app:layout_constraintBottom_toTopOf="@+id/splineBtn"
         app:layout_constraintDimensionRatio="1:0.3"
-        app:layout_constraintEnd_toEndOf="@id/guide3"
+        app:layout_constraintEnd_toEndOf="@id/guide2_1"
         app:layout_constraintHorizontal_bias="0.5"
         app:layout_constraintStart_toEndOf="@id/guide2"
         app:layout_constraintTop_toBottomOf="@+id/screenBtn" />
@@ -255,7 +296,7 @@
         android:textSize="20sp"
         app:layout_constraintBottom_toTopOf="@+id/cornerBtn"
         app:layout_constraintDimensionRatio="1:0.3"
-        app:layout_constraintEnd_toEndOf="@id/guide3"
+        app:layout_constraintEnd_toEndOf="@id/guide2_1"
         app:layout_constraintHorizontal_bias="0.5"
         app:layout_constraintStart_toEndOf="@id/guide2"
         app:layout_constraintTop_toBottomOf="@+id/frameBtn" />
@@ -271,7 +312,7 @@
         android:textSize="20sp"
         app:layout_constraintBottom_toTopOf="@+id/springBtn"
         app:layout_constraintDimensionRatio="1:0.3"
-        app:layout_constraintEnd_toEndOf="@id/guide3"
+        app:layout_constraintEnd_toEndOf="@id/guide2_1"
         app:layout_constraintHorizontal_bias="0.5"
         app:layout_constraintStart_toEndOf="@id/guide2"
         app:layout_constraintTop_toBottomOf="@+id/splineBtn" />
@@ -287,7 +328,7 @@
         android:textSize="20sp"
         app:layout_constraintBottom_toTopOf="@+id/plungerBtn"
         app:layout_constraintDimensionRatio="1:0.3"
-        app:layout_constraintEnd_toEndOf="@id/guide3"
+        app:layout_constraintEnd_toEndOf="@id/guide2_1"
         app:layout_constraintHorizontal_bias="0.5"
         app:layout_constraintStart_toEndOf="@id/guide2"
         app:layout_constraintTop_toBottomOf="@+id/cornerBtn" />
@@ -303,7 +344,7 @@
         android:textSize="20sp"
         app:layout_constraintBottom_toTopOf="@+id/spreaderBarBtn"
         app:layout_constraintDimensionRatio="1:0.3"
-        app:layout_constraintEnd_toEndOf="@id/guide3"
+        app:layout_constraintEnd_toEndOf="@id/guide2_1"
         app:layout_constraintHorizontal_bias="0.5"
         app:layout_constraintStart_toEndOf="@id/guide2"
         app:layout_constraintTop_toBottomOf="@+id/springBtn" />
@@ -319,7 +360,7 @@
         android:textSize="20sp"
         app:layout_constraintBottom_toTopOf="@+id/spreaderClipsBtn"
         app:layout_constraintDimensionRatio="1:0.3"
-        app:layout_constraintEnd_toEndOf="@id/guide3"
+        app:layout_constraintEnd_toEndOf="@id/guide2_1"
         app:layout_constraintHorizontal_bias="0.5"
         app:layout_constraintStart_toEndOf="@id/guide2"
         app:layout_constraintTop_toBottomOf="@+id/plungerBtn" />
@@ -335,7 +376,7 @@
         android:textSize="20sp"
         app:layout_constraintBottom_toTopOf="@+id/pullTabsBtn"
         app:layout_constraintDimensionRatio="1:0.3"
-        app:layout_constraintEnd_toEndOf="@id/guide3"
+        app:layout_constraintEnd_toEndOf="@id/guide2_1"
         app:layout_constraintHorizontal_bias="0.5"
         app:layout_constraintStart_toEndOf="@id/guide2"
         app:layout_constraintTop_toBottomOf="@+id/spreaderBarBtn" />
@@ -351,7 +392,7 @@
         android:textSize="20sp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintDimensionRatio="1:0.3"
-        app:layout_constraintEnd_toEndOf="@id/guide3"
+        app:layout_constraintEnd_toEndOf="@id/guide2_1"
         app:layout_constraintHorizontal_bias="0.5"
         app:layout_constraintStart_toEndOf="@id/guide2"
         app:layout_constraintTop_toBottomOf="@+id/spreaderClipsBtn" />
