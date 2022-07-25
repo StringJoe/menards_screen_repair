@@ -162,7 +162,7 @@ public class screenMaterials extends AppCompatActivity implements PopupMenu.OnMe
         Intent intent = getIntent();
         getLargestValue = intent.getDoubleExtra("largestValue", 0);
         perimeter = intent.getIntExtra("perimeter", 0);
-        laborCost = intent.getDoubleExtra("laborCost", 0);
+        laborCost = intent.getIntExtra("laborCost", 0);
         //splineQty.setText(""+perimeter);
     }
 
