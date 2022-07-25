@@ -22,18 +22,18 @@
         app:layout_constraintGuide_percent="0.75" />
 
     <Button
-        android:id="@+id/materialsBtn"
+        android:id="@+id/menuInstructions"
         android:layout_width="0dp"
         android:layout_height="0dp"
         android:backgroundTint="@color/menards_green"
-        android:text="Screen Materials"
+        android:text="Instructions"
         android:textColor="@color/white"
-        app:layout_constraintBottom_toTopOf="@+id/costBtn"
+        app:layout_constraintBottom_toTopOf="@+id/sizeBtn"
         app:layout_constraintDimensionRatio="1:0.5"
         app:layout_constraintEnd_toEndOf="@id/guideline3"
         app:layout_constraintHorizontal_bias="0.5"
         app:layout_constraintStart_toEndOf="@id/guideline2"
-        app:layout_constraintTop_toBottomOf="@+id/sizeBtn" />
+        app:layout_constraintTop_toTopOf="parent" />
 
     <Button
         android:id="@+id/sizeBtn"
@@ -42,26 +42,12 @@
         android:backgroundTint="@color/menards_green"
         android:text="Screen Size"
         android:textColor="@color/white"
-        app:layout_constraintBottom_toTopOf="@+id/materialsBtn"
-        app:layout_constraintDimensionRatio="1:0.5"
-        app:layout_constraintEnd_toEndOf="@id/guideline3"
-        app:layout_constraintHorizontal_bias="0.5"
-        app:layout_constraintStart_toStartOf="@id/guideline2"
-        app:layout_constraintTop_toTopOf="parent" />
-
-    <Button
-        android:id="@+id/costBtn"
-        android:layout_width="0dp"
-        android:layout_height="0dp"
-        android:backgroundTint="@color/menards_green"
-        android:text="Total Screen Cost"
-        android:textColor="@color/white"
         app:layout_constraintBottom_toTopOf="@+id/measurementBtn"
         app:layout_constraintDimensionRatio="1:0.5"
         app:layout_constraintEnd_toEndOf="@id/guideline3"
         app:layout_constraintHorizontal_bias="0.5"
         app:layout_constraintStart_toStartOf="@id/guideline2"
-        app:layout_constraintTop_toBottomOf="@+id/materialsBtn" />
+        app:layout_constraintTop_toBottomOf="@+id/menuInstructions" />
 
     <Button
         android:id="@+id/measurementBtn"
@@ -75,6 +61,6 @@
         app:layout_constraintEnd_toStartOf="@id/guideline3"
         app:layout_constraintHorizontal_bias="0.5"
         app:layout_constraintStart_toEndOf="@id/guideline2"
-        app:layout_constraintTop_toBottomOf="@+id/costBtn" />
+        app:layout_constraintTop_toBottomOf="@+id/sizeBtn" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>
