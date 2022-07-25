@@ -43,12 +43,12 @@
         app:layout_constraintGuide_percent="0.81" />
 
     <androidx.appcompat.widget.AppCompatButton
-        android:id="@+id/resetBtn"
+        android:id="@+id/instructionsBtn"
         android:layout_width="0dp"
         android:layout_height="0dp"
         android:background="@color/menards_green"
         android:gravity="center_vertical"
-        android:text="Reset"
+        android:text="Instructions"
         android:textColor="@color/white"
         android:textSize="20sp"
         app:layout_constraintBottom_toTopOf="@+id/textView"
@@ -73,7 +73,7 @@
         app:layout_constraintEnd_toEndOf="@id/guide1_2"
         app:layout_constraintHorizontal_bias="0.5"
         app:layout_constraintStart_toEndOf="@id/guide1"
-        app:layout_constraintTop_toBottomOf="@+id/resetBtn" />
+        app:layout_constraintTop_toBottomOf="@+id/instructionsBtn" />
 
     <TextView
         android:id="@+id/textView2"
@@ -403,12 +403,12 @@
         app:layout_constraintTop_toBottomOf="@+id/spreaderClipsBtn" />
 
     <androidx.appcompat.widget.AppCompatButton
-        android:id="@+id/menuBtn2"
+        android:id="@+id/resetBtn"
         android:layout_width="0dp"
         android:layout_height="0dp"
         android:background="@color/menards_green"
         android:gravity="center_vertical|center_horizontal"
-        android:text="Menu"
+        android:text="Reset"
         android:textColor="@color/white"
         android:textSize="20sp"
         app:layout_constraintBottom_toTopOf="@+id/appCompatButton"
@@ -433,7 +433,7 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.5"
         app:layout_constraintStart_toEndOf="@id/guide3"
-        app:layout_constraintTop_toBottomOf="@+id/menuBtn2" />
+        app:layout_constraintTop_toBottomOf="@+id/resetBtn" />
 
     <TextView
         android:id="@+id/screenQty"

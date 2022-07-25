@@ -76,7 +76,7 @@
         android:text='7/16"'
         android:textColor="@color/white"
         android:textSize="20sp"
-        app:layout_constraintBottom_toTopOf="@+id/resetBtn"
+        app:layout_constraintBottom_toTopOf="@+id/instructionsBtn"
         app:layout_constraintDimensionRatio="1:0.4"
         app:layout_constraintEnd_toEndOf="@id/guide3"
         app:layout_constraintHorizontal_bias="0.5"
@@ -84,7 +84,7 @@
         app:layout_constraintTop_toBottomOf="@+id/lengthFractionCount" />
 
     <androidx.appcompat.widget.AppCompatButton
-        android:id="@+id/resetBtn"
+        android:id="@+id/instructionsBtn"
         android:layout_width="0dp"
         android:layout_height="0dp"
         android:background="@color/menards_green"
@@ -111,7 +111,7 @@
         app:layout_constraintEnd_toEndOf="@id/guide3"
         app:layout_constraintHorizontal_bias="0.5"
         app:layout_constraintStart_toEndOf="@id/guide2_1"
-        app:layout_constraintTop_toBottomOf="@+id/resetBtn" />
+        app:layout_constraintTop_toBottomOf="@+id/instructionsBtn" />
 
     <androidx.appcompat.widget.AppCompatButton
         android:id="@+id/instructions"

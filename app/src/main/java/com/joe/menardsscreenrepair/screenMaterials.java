@@ -1,7 +1,9 @@
 package com.joe.menardsscreenrepair;
 
+import androidx.appcompat.app.AlertDialog;
 import androidx.appcompat.app.AppCompatActivity;
 
+import android.content.DialogInterface;
 import android.content.Intent;
 import android.os.Bundle;
 import android.view.MenuItem;
@@ -12,7 +14,14 @@ import android.widget.TextView;
 
 public class screenMaterials extends AppCompatActivity implements PopupMenu.OnMenuItemClickListener {
 
-    Button resetBtn, costScreen, menuBtn2;
+    // variable for instructions message
+    String message = "To add a material, just tap on one of the SKU numbers underneath SKU. This will pull up" +
+            " either a menu of different materials to choose from, or just change it to the appropriate SKU number\n\n" +
+            "The Screen, Frame and Spline materials will automatically be filled after the material is chosen." +
+            " for the other materials, just tap the 0 underneath QTY and it will increase the count by 1.\n\n" +
+            "Once everything is chosen, you can either reset the materials, or tap TOTAL COST to see the cost of the screen";
+
+    Button resetBtn, costScreen, instructionsBtn;
 
     // buttons to grab sku numbers
     Button screenBtn, frameBtn, splineBtn, cornerBtn, springBtn, plungerBtn,
@@ -35,9 +44,9 @@ public class screenMaterials extends AppCompatActivity implements PopupMenu.OnMe
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_screen_materials);
 
-        resetBtn = findViewById(R.id.resetBtn);
+        instructionsBtn = findViewById(R.id.instructionsBtn);
         costScreen = findViewById(R.id.costScreen);
-        menuBtn2 = findViewById(R.id.menuBtn2);
+        resetBtn = findViewById(R.id.resetBtn);
 
         screenBtn = findViewById(R.id.screenBtn);
         frameBtn = findViewById(R.id.frameBtn);
@@ -61,12 +70,17 @@ public class screenMaterials extends AppCompatActivity implements PopupMenu.OnMe
 
         calculateScreenFrameSplineQty();
 
-        menuBtn2.setOnClickListener(new View.OnClickListener() {
+        resetBtn.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Intent intent = new Intent(screenMaterials.this, MainActivity.class);
-                startActivity(intent);
-                finish();
+                resetValues();
+            }
+        });
+
+        instructionsBtn.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                showDialogMessage();
             }
         });
 
@@ -157,6 +171,48 @@ public class screenMaterials extends AppCompatActivity implements PopupMenu.OnMe
         });
     }
 
+    public void resetValues()
+    {
+        screenBtn.setText("575-");
+
+        // resetting frame values
+        frameBtn.setText("575-");
+
+        // resetting spline values
+        splineBtn.setText("575-");
+
+        // resetting corner values
+        cornerBtn.setText("575-");
+        cornerQty.setText("0");
+        cornerCount = 0;
+
+        // resetting spring values
+        springCount = 0;
+        springQty.setText(""+springCount);
+        springBtn.setText("575-");
+
+        // resetting plunger latch values
+        plungerCount = 0;
+        plungerBtn.setText("575-");
+        plungerQty.setText(""+plungerCount);
+
+        // spreader bar values
+        spreaderBarCount = 0;
+        spreaderBarQty.setText(""+spreaderBarCount);
+        spreaderBarBtn.setText("575-");
+
+        //spreader bar clips values
+        spreaderBarClipCount = 0;
+        spreaderBarClipsQty.setText(""+spreaderBarClipCount);
+        spreaderBarClipsBtn.setText("575-");
+
+        // pull tabs values
+        pullTabCount = 0;
+        pullTabsQty.setText(""+pullTabCount);
+        pullTabsBtn.setText("575-");
+
+    }
+
     public void calculateScreenFrameSplineQty()
     {
         Intent intent = getIntent();
@@ -164,6 +220,21 @@ public class screenMaterials extends AppCompatActivity implements PopupMenu.OnMe
         perimeter = intent.getIntExtra("perimeter", 0);
         laborCost = intent.getIntExtra("laborCost", 0);
         //splineQty.setText(""+perimeter);
+    }
+
+    public void showDialogMessage()
+    {
+        AlertDialog.Builder alertDialog = new AlertDialog.Builder(this);
+        alertDialog.setTitle("Instructions")
+                .setMessage(message)
+                .setNegativeButton("Exit", new DialogInterface.OnClickListener() {
+                    @Override
+                    public void onClick(DialogInterface dialog, int which) {
+
+                    }
+                })
+                .show();
+        alertDialog.create();
     }
 
     public void screenMaterial(View v) {

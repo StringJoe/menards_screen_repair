@@ -30,7 +30,7 @@ public class screenSize extends AppCompatActivity {
         screenLength = findViewById(R.id.length);
 
         equalsBtn = findViewById(R.id.equals);
-        resetBtn = findViewById(R.id.resetBtn);
+        resetBtn = findViewById(R.id.instructionsBtn);
         mainMenuBtn = findViewById(R.id.menuBtn1);
         materialsBtn = findViewById(R.id.screenMaterials);
 
