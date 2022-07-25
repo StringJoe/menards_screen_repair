@@ -44,10 +44,9 @@ public class screenCost extends AppCompatActivity {
 
     public void getScreenCost()
     {
-
         Intent costIntent = getIntent();
         totalCost = costIntent.getDoubleExtra("totalCost", 0);
-        totalCostView.setText("Total Cost: "+myFormatter.format(totalCost));
+        totalCostView.setText("Total Cost: $"+myFormatter.format(totalCost));
     }
 
 }

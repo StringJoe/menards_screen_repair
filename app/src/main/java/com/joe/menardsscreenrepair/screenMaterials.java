@@ -358,6 +358,106 @@ public class screenMaterials extends AppCompatActivity implements PopupMenu.OnMe
                 splineQty.setText(""+(perimeter/12));
                 materialCost += Math.round(perimeter/12)*0.1;
                 return true;
+            case R.id.black5:
+                splineBtn.setText("575-8017");
+                splineQty.setText(""+(perimeter/12));
+                materialCost += Math.round(perimeter/12)*0.1;
+                return true;
+            case R.id.black6:
+                splineBtn.setText("575-8088");
+                splineQty.setText(""+(perimeter/12));
+                materialCost += Math.round(perimeter/12)*0.1;
+                return true;
+            case R.id.black7:
+                splineBtn.setText("575-8025");
+                splineQty.setText(""+(perimeter/12));
+                materialCost += Math.round(perimeter/12)*0.1;
+                return true;
+            case R.id.black8:
+                splineBtn.setText("575-8090");
+                splineQty.setText(""+(perimeter/12));
+                materialCost += Math.round(perimeter/12)*0.1;
+                return true;
+            case R.id.black9:
+                splineBtn.setText("575-8078");
+                splineQty.setText(""+(perimeter/12));
+                materialCost += Math.round(perimeter/12)*0.1;
+                return true;
+            case R.id.black10:
+                splineBtn.setText("575-8079");
+                splineQty.setText(""+(perimeter/12));
+                materialCost += Math.round(perimeter/12)*0.1;
+                return true;
+            case R.id.black11:
+                splineBtn.setText("575-8055");
+                splineQty.setText(""+(perimeter/12));
+                materialCost += Math.round(perimeter/12)*0.1;
+                return true;
+            case R.id.black12:
+                splineBtn.setText("575-7019");
+                splineQty.setText(""+(perimeter/12));
+                materialCost += Math.round(perimeter/12)*0.1;
+                return true;
+            case R.id.gray1:
+                splineBtn.setText("575-8018");
+                splineQty.setText(""+(perimeter/12));
+                materialCost += Math.round(perimeter/12)*0.1;
+                return true;
+            case R.id.gray2:
+                splineBtn.setText("575-8087");
+                splineQty.setText(""+(perimeter/12));
+                materialCost += Math.round(perimeter/12)*0.1;
+                return true;
+            case R.id.gray3:
+                splineBtn.setText("575-8019");
+                splineQty.setText(""+(perimeter/12));
+                materialCost += Math.round(perimeter/12)*0.1;
+                return true;
+            case R.id.gray4:
+                splineBtn.setText("575-8020");
+                splineQty.setText(""+(perimeter/12));
+                materialCost += Math.round(perimeter/12)*0.1;
+                return true;
+            case R.id.gray5:
+                splineBtn.setText("575-8021");
+                splineQty.setText(""+(perimeter/12));
+                materialCost += Math.round(perimeter/12)*0.1;
+                return true;
+            case R.id.gray6:
+                splineBtn.setText("575-8089");
+                splineQty.setText(""+(perimeter/12));
+                materialCost += Math.round(perimeter/12)*0.1;
+                return true;
+            case R.id.gray7:
+                splineBtn.setText("575-8026");
+                splineQty.setText(""+(perimeter/12));
+                materialCost += Math.round(perimeter/12)*0.1;
+                return true;
+            case R.id.gray8:
+                splineBtn.setText("575-8091");
+                splineQty.setText(""+(perimeter/12));
+                materialCost += Math.round(perimeter/12)*0.1;
+                return true;
+            case R.id.gray9:
+                splineBtn.setText("575-8081");
+                splineQty.setText(""+(perimeter/12));
+                materialCost += Math.round(perimeter/12)*0.1;
+                return true;
+            case R.id.gray10:
+                splineBtn.setText("575-8092");
+                splineQty.setText(""+(perimeter/12));
+                materialCost += Math.round(perimeter/12)*0.1;
+                return true;
+            case R.id.gray11:
+                splineBtn.setText("575-8023");
+                splineQty.setText(""+(perimeter/12));
+                materialCost += Math.round(perimeter/12)*0.1;
+                return true;
+            case R.id.gray12:
+                splineBtn.setText("575-8024");
+                splineQty.setText(""+(perimeter/12));
+                materialCost += Math.round(perimeter/12)*0.1;
+                return true;
             case R.id.corner1:
                 cornerBtn.setText("575-8047");
                 materialCost += cornerCount*0.2;

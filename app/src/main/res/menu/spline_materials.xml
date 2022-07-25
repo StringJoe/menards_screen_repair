@@ -12,4 +12,64 @@
     <item android:id="@+id/black4"
         android:title="Black 0.155"/>
 
+    <item android:id="@+id/black5"
+        android:title="Black 0.165"/>
+
+    <item android:id="@+id/black6"
+        android:title="Black 0.175"/>
+
+    <item android:id="@+id/black7"
+        android:title="Black 0.185"/>
+
+    <item android:id="@+id/black8"
+        android:title="Black 0.195"/>
+
+    <item android:id="@+id/black9"
+        android:title="Black 0.210"/>
+
+    <item android:id="@+id/black10"
+        android:title="Black 0.220"/>
+
+    <item android:id="@+id/black11"
+        android:title="Black 0.230"/>
+
+    <item android:id="@+id/black12"
+        android:title="Black 0.250"/>
+
+    <item android:id="@+id/gray1"
+        android:title="gray 0.120"/>
+
+    <item android:id="@+id/gray2"
+        android:title="gray 0.130"/>
+
+    <item android:id="@+id/gray3"
+        android:title="gray 0.140"/>
+
+    <item android:id="@+id/gray4"
+        android:title="gray 0.155"/>
+
+    <item android:id="@+id/gray5"
+        android:title="gray 0.165"/>
+
+    <item android:id="@+id/gray6"
+        android:title="gray 0.175"/>
+
+    <item android:id="@+id/gray7"
+        android:title="gray 0.185"/>
+
+    <item android:id="@+id/gray8"
+        android:title="gray 0.195"/>
+
+    <item android:id="@+id/gray9"
+        android:title="gray 0.210"/>
+
+    <item android:id="@+id/gray10"
+        android:title="gray 0.220"/>
+
+    <item android:id="@+id/gray11"
+        android:title="gray 0.230"/>
+
+    <item android:id="@+id/gray12"
+        android:title="gray 0.250"/>
+
 </menu>
