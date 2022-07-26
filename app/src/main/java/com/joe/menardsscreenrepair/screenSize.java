@@ -160,6 +160,7 @@ public class screenSize extends AppCompatActivity {
 
         squareFt.setText("Sq ft: 0");
 
+        laborCost = 0;
         width = 0;
         length = 0;
         squareFootage = 0;
