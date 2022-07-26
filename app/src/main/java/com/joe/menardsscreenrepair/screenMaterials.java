@@ -2,9 +2,11 @@ package com.joe.menardsscreenrepair;
 
 import androidx.appcompat.app.AlertDialog;
 import androidx.appcompat.app.AppCompatActivity;
+import androidx.core.content.res.ResourcesCompat;
 
 import android.content.DialogInterface;
 import android.content.Intent;
+import android.graphics.Color;
 import android.os.Bundle;
 import android.view.MenuItem;
 import android.view.View;
@@ -13,6 +15,28 @@ import android.widget.PopupMenu;
 import android.widget.TextView;
 
 public class screenMaterials extends AppCompatActivity implements PopupMenu.OnMenuItemClickListener {
+
+    // cost of materials
+    double charcoalFiber = 1.99;
+    double brightAluminum = 2.99;
+    double charcoalAluminum = 3.29;
+    double petDefense = 5.99;
+
+    double frameCost = 1.19;
+
+    double splineCost = 0.1;
+
+    double cornerCost = 0.2;
+
+    double springCost = 0.2;
+
+    double plungerCost = 0.2;
+
+    double spreaderBarCost = 3.99;
+
+    double spreaderClipsCost = 0.2;
+
+    double pullTabsCost = 0.2;
 
     // variable for instructions message
     String message = "To add a material, just tap on one of the SKU numbers underneath SKU. This will pull up" +
@@ -100,7 +124,7 @@ public class screenMaterials extends AppCompatActivity implements PopupMenu.OnMe
             public void onClick(View v) {
                 cornerCount += 1;
                 cornerQty.setText(""+cornerCount);
-                materialCost += 0.2;
+                materialCost += cornerCost;
             }
         });
 
@@ -109,7 +133,7 @@ public class screenMaterials extends AppCompatActivity implements PopupMenu.OnMe
             public void onClick(View v) {
                 springCount += 1;
                 springQty.setText(""+springCount);
-                materialCost += 0.2;
+                materialCost += springCost;
             }
         });
 
@@ -117,6 +141,8 @@ public class screenMaterials extends AppCompatActivity implements PopupMenu.OnMe
             @Override
             public void onClick(View v) {
                 plungerBtn.setText("575-8093");
+                plungerBtn.setEnabled(false);
+                plungerBtn.setBackgroundColor(Color.GRAY);
             }
         });
 
@@ -125,7 +151,7 @@ public class screenMaterials extends AppCompatActivity implements PopupMenu.OnMe
             public void onClick(View v) {
                 plungerCount += 1;
                 plungerQty.setText(""+plungerCount);
-                materialCost += 0.2;
+                materialCost += plungerCost;
             }
         });
 
@@ -134,7 +160,7 @@ public class screenMaterials extends AppCompatActivity implements PopupMenu.OnMe
             public void onClick(View v) {
                 spreaderBarCount += 1;
                 spreaderBarQty.setText(""+spreaderBarCount);
-                materialCost += 3.99;
+                materialCost += spreaderBarCost;
             }
         });
 
@@ -142,6 +168,8 @@ public class screenMaterials extends AppCompatActivity implements PopupMenu.OnMe
             @Override
             public void onClick(View v) {
                 spreaderBarClipsBtn.setText("575-8048");
+                spreaderBarClipsBtn.setEnabled(false);
+                spreaderBarClipsBtn.setBackgroundColor(Color.GRAY);
             }
         });
 
@@ -150,7 +178,7 @@ public class screenMaterials extends AppCompatActivity implements PopupMenu.OnMe
             public void onClick(View v) {
                 spreaderBarClipCount += 1;
                 spreaderBarClipsQty.setText(""+spreaderBarClipCount);
-                materialCost += 0.2;
+                materialCost += spreaderClipsCost;
             }
         });
 
@@ -158,6 +186,8 @@ public class screenMaterials extends AppCompatActivity implements PopupMenu.OnMe
             @Override
             public void onClick(View v) {
                 pullTabsBtn.setText("575-8027");
+                pullTabsBtn.setEnabled(false);
+                pullTabsBtn.setBackgroundColor(Color.GRAY);
             }
         });
 
@@ -166,51 +196,72 @@ public class screenMaterials extends AppCompatActivity implements PopupMenu.OnMe
             public void onClick(View v) {
                 pullTabCount += 1;
                 pullTabsQty.setText(""+pullTabCount);
-                materialCost += 0.2;
+                materialCost += pullTabsCost;
             }
         });
     }
 
     public void resetValues()
     {
+        // reset the cost of materials
+        materialCost = 0;
+
+        // resetting screen values
         screenBtn.setText("575-");
+        screenBtn.setEnabled(true);
+        screenBtn.setBackgroundColor(ResourcesCompat.getColor(getResources(), R.color.menards_green, null));
 
         // resetting frame values
         frameBtn.setText("575-");
+        frameBtn.setEnabled(true);
+        frameBtn.setBackgroundColor(ResourcesCompat.getColor(getResources(), R.color.menards_green, null));
 
         // resetting spline values
         splineBtn.setText("575-");
+        splineBtn.setEnabled(true);
+        splineBtn.setBackgroundColor(ResourcesCompat.getColor(getResources(), R.color.menards_green, null));
 
         // resetting corner values
         cornerBtn.setText("575-");
         cornerQty.setText("0");
         cornerCount = 0;
+        cornerBtn.setEnabled(true);
+        cornerBtn.setBackgroundColor(ResourcesCompat.getColor(getResources(), R.color.menards_green, null));
 
         // resetting spring values
         springCount = 0;
         springQty.setText(""+springCount);
         springBtn.setText("575-");
+        springBtn.setEnabled(true);
+        springBtn.setBackgroundColor(ResourcesCompat.getColor(getResources(), R.color.menards_green, null));
 
         // resetting plunger latch values
         plungerCount = 0;
         plungerBtn.setText("575-");
         plungerQty.setText(""+plungerCount);
+        plungerBtn.setEnabled(true);
+        plungerBtn.setBackgroundColor(ResourcesCompat.getColor(getResources(), R.color.menards_green, null));
 
         // spreader bar values
         spreaderBarCount = 0;
         spreaderBarQty.setText(""+spreaderBarCount);
         spreaderBarBtn.setText("575-");
+        spreaderBarBtn.setEnabled(true);
+        spreaderBarBtn.setBackgroundColor(ResourcesCompat.getColor(getResources(), R.color.menards_green, null));
 
         //spreader bar clips values
         spreaderBarClipCount = 0;
         spreaderBarClipsQty.setText(""+spreaderBarClipCount);
         spreaderBarClipsBtn.setText("575-");
+        spreaderBarClipsBtn.setEnabled(true);
+        spreaderBarClipsBtn.setBackgroundColor(ResourcesCompat.getColor(getResources(), R.color.menards_green, null));
 
         // pull tabs values
         pullTabCount = 0;
         pullTabsQty.setText(""+pullTabCount);
         pullTabsBtn.setText("575-");
-
+        pullTabsBtn.setEnabled(true);
+        pullTabsBtn.setBackgroundColor(ResourcesCompat.getColor(getResources(), R.color.menards_green, null));
     }
 
     public void calculateScreenFrameSplineQty()
@@ -219,7 +270,6 @@ public class screenMaterials extends AppCompatActivity implements PopupMenu.OnMe
         getLargestValue = intent.getDoubleExtra("largestValue", 0);
         perimeter = intent.getIntExtra("perimeter", 0);
         laborCost = intent.getIntExtra("laborCost", 0);
-        //splineQty.setText(""+perimeter);
     }
 
     public void showDialogMessage()
@@ -289,214 +339,190 @@ public class screenMaterials extends AppCompatActivity implements PopupMenu.OnMe
         switch(item.getItemId())
         {
             case R.id.screen1:
-                screenBtn.setText("575-8098");
-                screenQty.setText(""+Math.round(getLargestValue/12));
-                materialCost += Math.round(getLargestValue/12.0) * 1.99;
+                screenMenuValues("575-8098", charcoalFiber);
                 return true;
             case R.id.screen2:
-                screenBtn.setText("575-8099");
-                screenQty.setText(""+Math.round(getLargestValue/12));
-                materialCost += Math.round(getLargestValue/12) * 2.99;
+                screenMenuValues("575-8099", brightAluminum);
                 return true;
             case R.id.screen3:
-                screenBtn.setText("575-8100");
-                screenQty.setText(""+Math.round(getLargestValue/12));
-                materialCost += Math.round(getLargestValue/12) * 3.29;
+                screenMenuValues("575-8100", charcoalAluminum);
                 return true;
             case R.id.screen4:
-                screenBtn.setText("575-8101");
-                screenQty.setText(""+Math.round(getLargestValue/12));
-                materialCost += Math.round(getLargestValue/12) * 5.99;
+                screenMenuValues("575-8101", petDefense);
                 return true;
             case R.id.frame1:
-                frameBtn.setText("575-8033");
-                frameQty.setText(""+(perimeter/12));
-                materialCost += Math.round(perimeter/12)*1.19;
+                frameMenuValues("575-8033", frameCost);
                 return true;
             case R.id.frame2:
-                frameBtn.setText("575-8067");
-                frameQty.setText(""+(perimeter/12));
-                materialCost += Math.round(perimeter/12)*1.19;
+                frameMenuValues("575-8067", frameCost);
                 return true;
             case R.id.frame3:
-                frameBtn.setText("575-8034");
-                frameQty.setText(""+(perimeter/12));
-                materialCost += Math.round(perimeter/12)*1.19;
+                frameMenuValues("575-8034", frameCost);
                 return true;
             case R.id.frame4:
-                frameBtn.setText("575-8038");
-                frameQty.setText(""+(perimeter/12));
-                materialCost += Math.round(perimeter/12)*1.19;
+                frameMenuValues("575-8038", frameCost);
                 return true;
             case R.id.frame5:
-                frameBtn.setText("575-8035");
-                frameQty.setText(""+(perimeter/12));
-                materialCost += Math.round(perimeter/12)*1.19;
+                frameMenuValues("575-8035", frameCost);
                 return true;
             case R.id.frame6:
-                frameBtn.setText("575-8029");
-                frameQty.setText(""+(perimeter/12));
-                materialCost += Math.round(perimeter/12)*1.19;
+                frameMenuValues("575-8029", frameCost);
                 return true;
             case R.id.black1:
-                splineBtn.setText("575-8053");
-                splineQty.setText(""+(perimeter/12));
-                materialCost += Math.round(perimeter/12)*0.1;
+                splineMenuValues("575-8053", splineCost);
                 return true;
             case R.id.black2:
-                splineBtn.setText("575-8086");
-                splineQty.setText(""+(perimeter/12));
-                materialCost += Math.round(perimeter/12)*0.1;
+                splineMenuValues("575-8086", splineCost);
                 return true;
             case R.id.black3:
-                splineBtn.setText("575-8054");
-                splineQty.setText(""+(perimeter/12));
-                materialCost += Math.round(perimeter/12)*0.1;
+                splineMenuValues("575-8054", splineCost);
                 return true;
             case R.id.black4:
-                splineBtn.setText("575-8052");
-                splineQty.setText(""+(perimeter/12));
-                materialCost += Math.round(perimeter/12)*0.1;
+                splineMenuValues("575-8052", splineCost);
                 return true;
             case R.id.black5:
-                splineBtn.setText("575-8017");
-                splineQty.setText(""+(perimeter/12));
-                materialCost += Math.round(perimeter/12)*0.1;
+                splineMenuValues("575-8017", splineCost);
                 return true;
             case R.id.black6:
-                splineBtn.setText("575-8088");
-                splineQty.setText(""+(perimeter/12));
-                materialCost += Math.round(perimeter/12)*0.1;
+                splineMenuValues("575-8088", splineCost);
                 return true;
             case R.id.black7:
-                splineBtn.setText("575-8025");
-                splineQty.setText(""+(perimeter/12));
-                materialCost += Math.round(perimeter/12)*0.1;
+                splineMenuValues("575-8025", splineCost);
                 return true;
             case R.id.black8:
-                splineBtn.setText("575-8090");
-                splineQty.setText(""+(perimeter/12));
-                materialCost += Math.round(perimeter/12)*0.1;
+                splineMenuValues("575-8090", splineCost);
                 return true;
             case R.id.black9:
-                splineBtn.setText("575-8078");
-                splineQty.setText(""+(perimeter/12));
-                materialCost += Math.round(perimeter/12)*0.1;
+                splineMenuValues("575-8078", splineCost);
                 return true;
             case R.id.black10:
-                splineBtn.setText("575-8079");
-                splineQty.setText(""+(perimeter/12));
-                materialCost += Math.round(perimeter/12)*0.1;
+                splineMenuValues("575-8079", splineCost);
                 return true;
             case R.id.black11:
-                splineBtn.setText("575-8055");
-                splineQty.setText(""+(perimeter/12));
-                materialCost += Math.round(perimeter/12)*0.1;
+                splineMenuValues("575-8055", splineCost);
                 return true;
             case R.id.black12:
-                splineBtn.setText("575-7019");
-                splineQty.setText(""+(perimeter/12));
-                materialCost += Math.round(perimeter/12)*0.1;
+                splineMenuValues("575-7019", splineCost);
                 return true;
             case R.id.gray1:
-                splineBtn.setText("575-8018");
-                splineQty.setText(""+(perimeter/12));
-                materialCost += Math.round(perimeter/12)*0.1;
+                splineMenuValues("575-8018", splineCost);
                 return true;
             case R.id.gray2:
-                splineBtn.setText("575-8087");
-                splineQty.setText(""+(perimeter/12));
-                materialCost += Math.round(perimeter/12)*0.1;
+                splineMenuValues("575-8087", splineCost);
                 return true;
             case R.id.gray3:
-                splineBtn.setText("575-8019");
-                splineQty.setText(""+(perimeter/12));
-                materialCost += Math.round(perimeter/12)*0.1;
+                splineMenuValues("575-8019", splineCost);
                 return true;
             case R.id.gray4:
-                splineBtn.setText("575-8020");
-                splineQty.setText(""+(perimeter/12));
-                materialCost += Math.round(perimeter/12)*0.1;
+                splineMenuValues("575-8020", splineCost);
                 return true;
             case R.id.gray5:
-                splineBtn.setText("575-8021");
-                splineQty.setText(""+(perimeter/12));
-                materialCost += Math.round(perimeter/12)*0.1;
+                splineMenuValues("575-8021", splineCost);
                 return true;
             case R.id.gray6:
-                splineBtn.setText("575-8089");
-                splineQty.setText(""+(perimeter/12));
-                materialCost += Math.round(perimeter/12)*0.1;
+                splineMenuValues("575-8089", splineCost);
                 return true;
             case R.id.gray7:
-                splineBtn.setText("575-8026");
-                splineQty.setText(""+(perimeter/12));
-                materialCost += Math.round(perimeter/12)*0.1;
+                splineMenuValues("575-8026", splineCost);
                 return true;
             case R.id.gray8:
-                splineBtn.setText("575-8091");
-                splineQty.setText(""+(perimeter/12));
-                materialCost += Math.round(perimeter/12)*0.1;
+                splineMenuValues("575-8091", splineCost);
                 return true;
             case R.id.gray9:
-                splineBtn.setText("575-8081");
-                splineQty.setText(""+(perimeter/12));
-                materialCost += Math.round(perimeter/12)*0.1;
+                splineMenuValues("575-8081", splineCost);
                 return true;
             case R.id.gray10:
-                splineBtn.setText("575-8092");
-                splineQty.setText(""+(perimeter/12));
-                materialCost += Math.round(perimeter/12)*0.1;
+                splineMenuValues("575-8092", splineCost);
                 return true;
             case R.id.gray11:
-                splineBtn.setText("575-8023");
-                splineQty.setText(""+(perimeter/12));
-                materialCost += Math.round(perimeter/12)*0.1;
+                splineMenuValues("575-8023", splineCost);
                 return true;
             case R.id.gray12:
-                splineBtn.setText("575-8024");
-                splineQty.setText(""+(perimeter/12));
-                materialCost += Math.round(perimeter/12)*0.1;
+                splineMenuValues("575-8024", splineCost);
                 return true;
             case R.id.corner1:
-                cornerBtn.setText("575-8047");
-                materialCost += cornerCount*0.2;
+                cornerMenuValues("575-8047");
                 return true;
             case R.id.corner2:
-                cornerBtn.setText("575-8031");
+                cornerMenuValues("575-8031");
                 return true;
             case R.id.corner3:
-                cornerBtn.setText("575-8045");
+                cornerMenuValues("575-8045");
                 return true;
             case R.id.corner4:
-                cornerBtn.setText("575-8070");
+                cornerMenuValues("575-8070");
                 return true;
             case R.id.corner5:
-                cornerBtn.setText("575-8046");
+                cornerMenuValues("575-8046");
                 return true;
             case R.id.corner6:
-                cornerBtn.setText("575-8039");
+                cornerMenuValues("575-8039");
                 return true;
             case R.id.flat:
-                springBtn.setText("575-8094");
-                //materialCost += 0.2*springCount;
+                springMenuValues("575-8094");
                 return true;
             case R.id.spring:
-                springBtn.setText("575-8028");
+                springMenuValues("575-8028");
                 return true;
             case R.id.bar1:
-                spreaderBarBtn.setText("575-8036");
-                //materialCost += 3.99*spreaderBarCount;
+                spreaderBarMenuValues("575-8036");
                 return true;
             case R.id.bar2:
-                spreaderBarBtn.setText("575-8037");
+                spreaderBarMenuValues("575-8037");
                 return true;
             case R.id.bar3:
-                spreaderBarBtn.setText("575-8038");
+                spreaderBarMenuValues("575-8038");
                 return true;
             default:
                 return false;
         }
 
+    }
+    public void screenMenuValues(String sku, double cost)
+    {
+        screenBtn.setText(sku);
+        screenBtn.setEnabled(false);
+        screenBtn.setBackgroundColor(Color.GRAY);
+        screenQty.setText(""+Math.round(getLargestValue/12));
+        materialCost += Math.round(getLargestValue/12.0) * cost;
+    }
+
+    public void frameMenuValues(String sku, double cost)
+    {
+        frameBtn.setText(sku);
+        frameBtn.setEnabled(false);
+        frameBtn.setBackgroundColor(Color.GRAY);
+        frameQty.setText(""+(perimeter/12));
+        materialCost += Math.round(perimeter/12)*cost;
+    }
+
+    public void splineMenuValues(String sku, double cost)
+    {
+        splineBtn.setText(sku);
+        splineQty.setText(""+(perimeter/12));
+        splineBtn.setEnabled(false);
+        splineBtn.setBackgroundColor(Color.GRAY);
+        materialCost += Math.round(perimeter/12)*cost;
+    }
+
+    public void cornerMenuValues(String sku)
+    {
+        cornerBtn.setText(sku);
+        cornerBtn.setEnabled(false);
+        cornerBtn.setBackgroundColor(Color.GRAY);
+    }
+
+    public void springMenuValues(String sku)
+    {
+        springBtn.setText(sku);
+        springBtn.setEnabled(false);
+        springBtn.setBackgroundColor(Color.GRAY);
+    }
+
+    public void spreaderBarMenuValues(String sku)
+    {
+        spreaderBarBtn.setText(sku);
+        spreaderBarBtn.setEnabled(false);
+        spreaderBarBtn.setBackgroundColor(Color.GRAY);
     }
 }
