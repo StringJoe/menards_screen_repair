@@ -11,6 +11,7 @@ import android.os.Bundle;
 import android.view.MenuItem;
 import android.view.View;
 import android.widget.Button;
+import android.widget.EditText;
 import android.widget.PopupMenu;
 import android.widget.TextView;
 
@@ -21,6 +22,8 @@ public class screenMaterials extends AppCompatActivity implements PopupMenu.OnMe
     double brightAluminum = 2.99;
     double charcoalAluminum = 3.29;
     double petDefense = 5.99;
+
+    double storeScreenCost, storeFrameCost, storeSplineCost;
 
     double frameCost = 1.19;
 
@@ -54,7 +57,7 @@ public class screenMaterials extends AppCompatActivity implements PopupMenu.OnMe
     // text views for screen material quantities
     TextView screenQty, frameQty, splineQty;
 
-    Button cornerQty, springQty, plungerQty, spreaderBarQty,
+    EditText cornerQty, springQty, plungerQty, spreaderBarQty,
             spreaderBarClipsQty, pullTabsQty;
 
     // variables to hold count of corner spring spreader etc, quantities
@@ -111,29 +114,12 @@ public class screenMaterials extends AppCompatActivity implements PopupMenu.OnMe
         costScreen.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
+                grabMaterialQuantities();
                 totalCost = laborCost + materialCost;
                 Intent intent = new Intent(screenMaterials.this, screenCost.class);
                 intent.putExtra("totalCost", totalCost);
                 startActivity(intent);
                 finish();
-            }
-        });
-
-        cornerQty.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                cornerCount += 1;
-                cornerQty.setText(""+cornerCount);
-                materialCost += cornerCost;
-            }
-        });
-
-        springQty.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                springCount += 1;
-                springQty.setText(""+springCount);
-                materialCost += springCost;
             }
         });
 
@@ -146,39 +132,12 @@ public class screenMaterials extends AppCompatActivity implements PopupMenu.OnMe
             }
         });
 
-        plungerQty.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                plungerCount += 1;
-                plungerQty.setText(""+plungerCount);
-                materialCost += plungerCost;
-            }
-        });
-
-        spreaderBarQty.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                spreaderBarCount += 1;
-                spreaderBarQty.setText(""+spreaderBarCount);
-                materialCost += spreaderBarCost;
-            }
-        });
-
         spreaderBarClipsBtn.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
                 spreaderBarClipsBtn.setText("575-8048");
                 spreaderBarClipsBtn.setEnabled(false);
                 spreaderBarClipsBtn.setBackgroundColor(Color.GRAY);
-            }
-        });
-
-        spreaderBarClipsQty.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                spreaderBarClipCount += 1;
-                spreaderBarClipsQty.setText(""+spreaderBarClipCount);
-                materialCost += spreaderClipsCost;
             }
         });
 
@@ -191,14 +150,44 @@ public class screenMaterials extends AppCompatActivity implements PopupMenu.OnMe
             }
         });
 
-        pullTabsQty.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                pullTabCount += 1;
-                pullTabsQty.setText(""+pullTabCount);
-                materialCost += pullTabsCost;
-            }
-        });
+    }
+
+    public void grabMaterialQuantities()
+    {
+        //width = Integer.parseInt(screenWidth.getText().toString());
+        //length = Integer.parseInt(screenLength.getText().toString());
+
+        if(!cornerQty.getText().toString().equals(""))
+        {
+            materialCost += Integer.parseInt(cornerQty.getText().toString()) * cornerCost;
+        }
+
+        if(!springQty.getText().toString().equals(""))
+        {
+            materialCost += Integer.parseInt(springQty.getText().toString()) * springCost;
+        }
+
+        if(!plungerQty.getText().toString().equals(""))
+        {
+            materialCost += Integer.parseInt(plungerQty.getText().toString()) * plungerCost;
+        }
+
+        if(!spreaderBarQty.getText().toString().equals(""))
+        {
+            materialCost += Integer.parseInt(spreaderBarQty.getText().toString()) * spreaderBarCost;
+        }
+
+        if(!spreaderBarClipsQty.getText().toString().equals(""))
+        {
+            materialCost += Integer.parseInt(spreaderBarClipsQty.getText().toString()) * spreaderClipsCost;
+        }
+
+        if(!pullTabsQty.getText().toString().equals(""))
+        {
+            materialCost += Integer.parseInt(pullTabsQty.getText().toString()) * pullTabsCost;
+        }
+
+        materialCost += storeScreenCost + storeFrameCost + storeSplineCost;
     }
 
     public void resetValues()
@@ -208,60 +197,42 @@ public class screenMaterials extends AppCompatActivity implements PopupMenu.OnMe
 
         // resetting screen values
         screenBtn.setText("575-");
-        screenBtn.setEnabled(true);
-        screenBtn.setBackgroundColor(ResourcesCompat.getColor(getResources(), R.color.menards_green, null));
 
         // resetting frame values
         frameBtn.setText("575-");
-        frameBtn.setEnabled(true);
-        frameBtn.setBackgroundColor(ResourcesCompat.getColor(getResources(), R.color.menards_green, null));
 
         // resetting spline values
         splineBtn.setText("575-");
-        splineBtn.setEnabled(true);
-        splineBtn.setBackgroundColor(ResourcesCompat.getColor(getResources(), R.color.menards_green, null));
 
         // resetting corner values
         cornerBtn.setText("575-");
-        cornerQty.setText("0");
-        cornerCount = 0;
-        cornerBtn.setEnabled(true);
-        cornerBtn.setBackgroundColor(ResourcesCompat.getColor(getResources(), R.color.menards_green, null));
+        cornerQty.setText("");
+        cornerQty.setHint("0");
 
         // resetting spring values
-        springCount = 0;
-        springQty.setText(""+springCount);
+        springQty.setText("");
+        springQty.setHint("0");
         springBtn.setText("575-");
-        springBtn.setEnabled(true);
-        springBtn.setBackgroundColor(ResourcesCompat.getColor(getResources(), R.color.menards_green, null));
 
         // resetting plunger latch values
-        plungerCount = 0;
         plungerBtn.setText("575-");
-        plungerQty.setText(""+plungerCount);
-        plungerBtn.setEnabled(true);
-        plungerBtn.setBackgroundColor(ResourcesCompat.getColor(getResources(), R.color.menards_green, null));
+        plungerQty.setText("");
+        plungerQty.setHint("0");
 
         // spreader bar values
-        spreaderBarCount = 0;
-        spreaderBarQty.setText(""+spreaderBarCount);
+        spreaderBarQty.setText("");
+        spreaderBarQty.setHint("0");
         spreaderBarBtn.setText("575-");
-        spreaderBarBtn.setEnabled(true);
-        spreaderBarBtn.setBackgroundColor(ResourcesCompat.getColor(getResources(), R.color.menards_green, null));
 
         //spreader bar clips values
-        spreaderBarClipCount = 0;
-        spreaderBarClipsQty.setText(""+spreaderBarClipCount);
+        spreaderBarClipsQty.setText("");
+        spreaderBarClipsQty.setHint("0");
         spreaderBarClipsBtn.setText("575-");
-        spreaderBarClipsBtn.setEnabled(true);
-        spreaderBarClipsBtn.setBackgroundColor(ResourcesCompat.getColor(getResources(), R.color.menards_green, null));
 
         // pull tabs values
-        pullTabCount = 0;
-        pullTabsQty.setText(""+pullTabCount);
+        pullTabsQty.setText("");
+        pullTabsQty.setHint("0");
         pullTabsBtn.setText("575-");
-        pullTabsBtn.setEnabled(true);
-        pullTabsBtn.setBackgroundColor(ResourcesCompat.getColor(getResources(), R.color.menards_green, null));
     }
 
     public void calculateScreenFrameSplineQty()
@@ -481,48 +452,36 @@ public class screenMaterials extends AppCompatActivity implements PopupMenu.OnMe
     public void screenMenuValues(String sku, double cost)
     {
         screenBtn.setText(sku);
-        screenBtn.setEnabled(false);
-        screenBtn.setBackgroundColor(Color.GRAY);
         screenQty.setText(""+Math.round(getLargestValue/12));
-        materialCost += Math.round(getLargestValue/12.0) * cost;
+        storeScreenCost = Math.round(getLargestValue/12.0) * cost;
     }
 
     public void frameMenuValues(String sku, double cost)
     {
         frameBtn.setText(sku);
-        frameBtn.setEnabled(false);
-        frameBtn.setBackgroundColor(Color.GRAY);
         frameQty.setText(""+(perimeter/12));
-        materialCost += Math.round(perimeter/12)*cost;
+        storeFrameCost = Math.round(perimeter/12)*cost;
     }
 
     public void splineMenuValues(String sku, double cost)
     {
         splineBtn.setText(sku);
         splineQty.setText(""+(perimeter/12));
-        splineBtn.setEnabled(false);
-        splineBtn.setBackgroundColor(Color.GRAY);
-        materialCost += Math.round(perimeter/12)*cost;
+        storeSplineCost = Math.round(perimeter/12)*cost;
     }
 
     public void cornerMenuValues(String sku)
     {
         cornerBtn.setText(sku);
-        cornerBtn.setEnabled(false);
-        cornerBtn.setBackgroundColor(Color.GRAY);
     }
 
     public void springMenuValues(String sku)
     {
         springBtn.setText(sku);
-        springBtn.setEnabled(false);
-        springBtn.setBackgroundColor(Color.GRAY);
     }
 
     public void spreaderBarMenuValues(String sku)
     {
         spreaderBarBtn.setText(sku);
-        spreaderBarBtn.setEnabled(false);
-        spreaderBarBtn.setBackgroundColor(Color.GRAY);
     }
 }
