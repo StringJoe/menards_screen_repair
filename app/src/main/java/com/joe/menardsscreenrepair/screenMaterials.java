@@ -45,7 +45,7 @@ public class screenMaterials extends AppCompatActivity implements PopupMenu.OnMe
     String message = "To add a material, just tap on one of the SKU numbers underneath SKU. This will pull up" +
             " either a menu of different materials to choose from, or just change it to the appropriate SKU number\n\n" +
             "The Screen, Frame and Spline materials will automatically be filled after the material is chosen." +
-            " for the other materials, just tap the 0 underneath QTY and it will increase the count by 1.\n\n" +
+            " for the other materials, just tap the 0 underneath QTY and enter the quantity you want.\n\n" +
             "Once everything is chosen, you can either reset the materials, or tap TOTAL COST to see the cost of the screen";
 
     Button resetBtn, costScreen, instructionsBtn;
