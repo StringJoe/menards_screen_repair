@@ -12,21 +12,14 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:orientation="vertical"
-        app:layout_constraintGuide_percent="0" />
-
-    <androidx.constraintlayout.widget.Guideline
-        android:id="@+id/guide1_2"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:orientation="vertical"
-        app:layout_constraintGuide_percent="0.38" />
+        app:layout_constraintGuide_percent="0.04" />
 
     <androidx.constraintlayout.widget.Guideline
         android:id="@+id/guide2"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:orientation="vertical"
-        app:layout_constraintGuide_percent="0.4" />
+        app:layout_constraintGuide_percent="0.41" />
 
     <androidx.constraintlayout.widget.Guideline
         android:id="@+id/guide2_1"
@@ -40,24 +33,24 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:orientation="vertical"
-        app:layout_constraintGuide_percent="0.81" />
+        app:layout_constraintGuide_percent="0.965" />
 
     <androidx.appcompat.widget.AppCompatButton
         android:id="@+id/instructionsBtn"
         android:layout_width="0dp"
         android:layout_height="0dp"
-        android:background="@color/menards_green"
-        android:gravity="center_vertical"
+        android:background="@color/material_dynamic_neutral90"
+        android:gravity="center_horizontal|center_vertical"
         android:text="Instructions"
-        android:textColor="@color/white"
+        android:textColor="@color/black"
         android:textSize="15sp"
         app:layout_constraintBottom_toTopOf="@+id/textView"
         app:layout_constraintDimensionRatio="1:0.3"
-        app:layout_constraintEnd_toEndOf="@id/guide1_2"
+        app:layout_constraintEnd_toEndOf="@id/guide2"
         app:layout_constraintHorizontal_bias="0.5"
         app:layout_constraintStart_toEndOf="@id/guide1"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_chainStyle="spread" />
+        app:layout_constraintVertical_chainStyle="packed" />
 
     <TextView
         android:id="@+id/textView"
@@ -70,7 +63,7 @@
         android:textSize="20sp"
         app:layout_constraintBottom_toTopOf="@+id/textView2"
         app:layout_constraintDimensionRatio="1:0.3"
-        app:layout_constraintEnd_toEndOf="@id/guide1_2"
+        app:layout_constraintEnd_toEndOf="@id/guide2"
         app:layout_constraintHorizontal_bias="0.5"
         app:layout_constraintStart_toEndOf="@id/guide1"
         app:layout_constraintTop_toBottomOf="@+id/instructionsBtn" />
@@ -86,7 +79,7 @@
         android:textSize="20sp"
         app:layout_constraintBottom_toTopOf="@+id/textView3"
         app:layout_constraintDimensionRatio="1:0.3"
-        app:layout_constraintEnd_toEndOf="@id/guide1_2"
+        app:layout_constraintEnd_toEndOf="@id/guide2"
         app:layout_constraintHorizontal_bias="0.5"
         app:layout_constraintStart_toEndOf="@id/guide1"
         app:layout_constraintTop_toBottomOf="@+id/textView" />
@@ -102,7 +95,7 @@
         android:textSize="20sp"
         app:layout_constraintBottom_toTopOf="@+id/textView13"
         app:layout_constraintDimensionRatio="1:0.3"
-        app:layout_constraintEnd_toEndOf="@id/guide1_2"
+        app:layout_constraintEnd_toEndOf="@id/guide2"
         app:layout_constraintHorizontal_bias="0.5"
         app:layout_constraintStart_toEndOf="@id/guide1"
         app:layout_constraintTop_toBottomOf="@+id/textView2" />
@@ -118,7 +111,7 @@
         android:textSize="20sp"
         app:layout_constraintBottom_toTopOf="@+id/textView5"
         app:layout_constraintDimensionRatio="1:0.3"
-        app:layout_constraintEnd_toEndOf="@id/guide1_2"
+        app:layout_constraintEnd_toEndOf="@id/guide2"
         app:layout_constraintHorizontal_bias="0.5"
         app:layout_constraintStart_toEndOf="@id/guide1"
         app:layout_constraintTop_toBottomOf="@+id/textView3" />
@@ -134,7 +127,7 @@
         android:textSize="20sp"
         app:layout_constraintBottom_toTopOf="@+id/textView6"
         app:layout_constraintDimensionRatio="1:0.3"
-        app:layout_constraintEnd_toEndOf="@id/guide1_2"
+        app:layout_constraintEnd_toEndOf="@id/guide2"
         app:layout_constraintHorizontal_bias="0.5"
         app:layout_constraintStart_toEndOf="@id/guide1"
         app:layout_constraintTop_toBottomOf="@+id/textView13" />
@@ -150,7 +143,7 @@
         android:textSize="20sp"
         app:layout_constraintBottom_toTopOf="@+id/textView7"
         app:layout_constraintDimensionRatio="1:0.3"
-        app:layout_constraintEnd_toEndOf="@id/guide1_2"
+        app:layout_constraintEnd_toEndOf="@id/guide2"
         app:layout_constraintHorizontal_bias="0.5"
         app:layout_constraintStart_toEndOf="@id/guide1"
         app:layout_constraintTop_toBottomOf="@+id/textView5" />
@@ -166,7 +159,7 @@
         android:textSize="20sp"
         app:layout_constraintBottom_toTopOf="@+id/textView8"
         app:layout_constraintDimensionRatio="1:0.3"
-        app:layout_constraintEnd_toEndOf="@id/guide1_2"
+        app:layout_constraintEnd_toEndOf="@id/guide2"
         app:layout_constraintHorizontal_bias="0.5"
         app:layout_constraintStart_toEndOf="@id/guide1"
         app:layout_constraintTop_toBottomOf="@+id/textView6" />
@@ -182,7 +175,7 @@
         android:textSize="20sp"
         app:layout_constraintBottom_toTopOf="@+id/textView12"
         app:layout_constraintDimensionRatio="1:0.3"
-        app:layout_constraintEnd_toEndOf="@id/guide1_2"
+        app:layout_constraintEnd_toEndOf="@id/guide2"
         app:layout_constraintHorizontal_bias="0.5"
         app:layout_constraintStart_toEndOf="@id/guide1"
         app:layout_constraintTop_toBottomOf="@+id/textView7" />
@@ -198,7 +191,7 @@
         android:textSize="20sp"
         app:layout_constraintBottom_toTopOf="@+id/textView9"
         app:layout_constraintDimensionRatio="1:0.3"
-        app:layout_constraintEnd_toEndOf="@id/guide1_2"
+        app:layout_constraintEnd_toEndOf="@id/guide2"
         app:layout_constraintHorizontal_bias="0.5"
         app:layout_constraintStart_toEndOf="@id/guide1"
         app:layout_constraintTop_toBottomOf="@+id/textView8" />
@@ -214,7 +207,7 @@
         android:textSize="20sp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintDimensionRatio="1:0.3"
-        app:layout_constraintEnd_toEndOf="@id/guide1_2"
+        app:layout_constraintEnd_toEndOf="@id/guide2"
         app:layout_constraintHorizontal_bias="0.5"
         app:layout_constraintStart_toEndOf="@id/guide1"
         app:layout_constraintTop_toBottomOf="@+id/textView12" />
@@ -223,10 +216,10 @@
         android:id="@+id/costScreen"
         android:layout_width="0dp"
         android:layout_height="0dp"
-        android:background="@color/menards_green"
-        android:gravity="center_vertical"
+        android:background="@color/material_dynamic_neutral90"
+        android:gravity="center_horizontal|center_vertical"
         android:text="Total Cost"
-        android:textColor="@color/white"
+        android:textColor="@color/black"
         android:textSize="15sp"
         app:layout_constraintBottom_toTopOf="@+id/textView10"
         app:layout_constraintDimensionRatio="1:0.3"
@@ -234,7 +227,7 @@
         app:layout_constraintHorizontal_bias="0.5"
         app:layout_constraintStart_toEndOf="@id/guide2"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_chainStyle="spread" />
+        app:layout_constraintVertical_chainStyle="packed" />
 
     <TextView
         android:id="@+id/textView10"
@@ -256,8 +249,9 @@
         android:id="@+id/screenBtn"
         android:layout_width="0dp"
         android:layout_height="0dp"
-        android:background="@color/menards_green"
+        android:background="@color/purple_500"
         android:gravity="center_vertical"
+        android:onClick="screenMaterial"
         android:text="575-"
         android:textColor="@color/white"
         android:textSize="20sp"
@@ -266,15 +260,15 @@
         app:layout_constraintEnd_toEndOf="@id/guide2_1"
         app:layout_constraintHorizontal_bias="0.5"
         app:layout_constraintStart_toEndOf="@id/guide2"
-        app:layout_constraintTop_toBottomOf="@+id/textView10"
-        android:onClick="screenMaterial"/>
+        app:layout_constraintTop_toBottomOf="@+id/textView10" />
 
     <androidx.appcompat.widget.AppCompatButton
         android:id="@+id/frameBtn"
         android:layout_width="0dp"
         android:layout_height="0dp"
-        android:background="@color/menards_green"
+        android:background="@color/purple_500"
         android:gravity="center_vertical"
+        android:onClick="frameMaterial"
         android:text="575-"
         android:textColor="@color/white"
         android:textSize="20sp"
@@ -283,15 +277,15 @@
         app:layout_constraintEnd_toEndOf="@id/guide2_1"
         app:layout_constraintHorizontal_bias="0.5"
         app:layout_constraintStart_toEndOf="@id/guide2"
-        app:layout_constraintTop_toBottomOf="@+id/screenBtn"
-        android:onClick="frameMaterial"/>
+        app:layout_constraintTop_toBottomOf="@+id/screenBtn" />
 
     <androidx.appcompat.widget.AppCompatButton
         android:id="@+id/splineBtn"
         android:layout_width="0dp"
         android:layout_height="0dp"
-        android:background="@color/menards_green"
+        android:background="@color/purple_500"
         android:gravity="center_vertical"
+        android:onClick="splineMaterial"
         android:text="575-"
         android:textColor="@color/white"
         android:textSize="20sp"
@@ -300,15 +294,15 @@
         app:layout_constraintEnd_toEndOf="@id/guide2_1"
         app:layout_constraintHorizontal_bias="0.5"
         app:layout_constraintStart_toEndOf="@id/guide2"
-        app:layout_constraintTop_toBottomOf="@+id/frameBtn"
-        android:onClick="splineMaterial"/>
+        app:layout_constraintTop_toBottomOf="@+id/frameBtn" />
 
     <androidx.appcompat.widget.AppCompatButton
         android:id="@+id/cornerBtn"
         android:layout_width="0dp"
         android:layout_height="0dp"
-        android:background="@color/menards_green"
+        android:background="@color/purple_500"
         android:gravity="center_vertical"
+        android:onClick="cornerMaterial"
         android:text="575-"
         android:textColor="@color/white"
         android:textSize="20sp"
@@ -317,15 +311,15 @@
         app:layout_constraintEnd_toEndOf="@id/guide2_1"
         app:layout_constraintHorizontal_bias="0.5"
         app:layout_constraintStart_toEndOf="@id/guide2"
-        app:layout_constraintTop_toBottomOf="@+id/splineBtn"
-        android:onClick="cornerMaterial"/>
+        app:layout_constraintTop_toBottomOf="@+id/splineBtn" />
 
     <androidx.appcompat.widget.AppCompatButton
         android:id="@+id/springBtn"
         android:layout_width="0dp"
         android:layout_height="0dp"
-        android:background="@color/menards_green"
+        android:background="@color/purple_500"
         android:gravity="center_vertical"
+        android:onClick="springMaterial"
         android:text="575-"
         android:textColor="@color/white"
         android:textSize="20sp"
@@ -334,14 +328,13 @@
         app:layout_constraintEnd_toEndOf="@id/guide2_1"
         app:layout_constraintHorizontal_bias="0.5"
         app:layout_constraintStart_toEndOf="@id/guide2"
-        app:layout_constraintTop_toBottomOf="@+id/cornerBtn"
-        android:onClick="springMaterial"/>
+        app:layout_constraintTop_toBottomOf="@+id/cornerBtn" />
 
     <androidx.appcompat.widget.AppCompatButton
         android:id="@+id/plungerBtn"
         android:layout_width="0dp"
         android:layout_height="0dp"
-        android:background="@color/menards_green"
+        android:background="@color/purple_500"
         android:gravity="center_vertical"
         android:text="575-"
         android:textColor="@color/white"
@@ -357,8 +350,9 @@
         android:id="@+id/spreaderBarBtn"
         android:layout_width="0dp"
         android:layout_height="0dp"
-        android:background="@color/menards_green"
+        android:background="@color/purple_500"
         android:gravity="center_vertical"
+        android:onClick="spreaderBarMaterial"
         android:text="575-"
         android:textColor="@color/white"
         android:textSize="20sp"
@@ -367,14 +361,13 @@
         app:layout_constraintEnd_toEndOf="@id/guide2_1"
         app:layout_constraintHorizontal_bias="0.5"
         app:layout_constraintStart_toEndOf="@id/guide2"
-        app:layout_constraintTop_toBottomOf="@+id/plungerBtn"
-        android:onClick="spreaderBarMaterial"/>
+        app:layout_constraintTop_toBottomOf="@+id/plungerBtn" />
 
     <androidx.appcompat.widget.AppCompatButton
         android:id="@+id/spreaderClipsBtn"
         android:layout_width="0dp"
         android:layout_height="0dp"
-        android:background="@color/menards_green"
+        android:background="@color/purple_500"
         android:gravity="center_vertical"
         android:text="575-"
         android:textColor="@color/white"
@@ -390,7 +383,7 @@
         android:id="@+id/pullTabsBtn"
         android:layout_width="0dp"
         android:layout_height="0dp"
-        android:background="@color/menards_green"
+        android:background="@color/purple_500"
         android:gravity="center_vertical"
         android:text="575-"
         android:textColor="@color/white"
@@ -406,18 +399,18 @@
         android:id="@+id/resetBtn"
         android:layout_width="0dp"
         android:layout_height="0dp"
-        android:background="@color/menards_green"
+        android:background="@color/material_dynamic_neutral90"
         android:gravity="center_vertical|center_horizontal"
         android:text="Reset"
-        android:textColor="@color/white"
+        android:textColor="@color/black"
         android:textSize="15sp"
         app:layout_constraintBottom_toTopOf="@+id/appCompatButton"
         app:layout_constraintDimensionRatio="1:0.6"
-        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintEnd_toEndOf="@id/guide3"
         app:layout_constraintHorizontal_bias="0.5"
-        app:layout_constraintStart_toEndOf="@id/guide3"
+        app:layout_constraintStart_toEndOf="@id/guide2_1"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_chainStyle="spread" />
+        app:layout_constraintVertical_chainStyle="packed" />
 
     <androidx.appcompat.widget.AppCompatButton
         android:id="@+id/appCompatButton"
@@ -430,153 +423,159 @@
         android:textSize="20sp"
         app:layout_constraintBottom_toTopOf="@+id/screenQty"
         app:layout_constraintDimensionRatio="1:0.6"
-        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintEnd_toEndOf="@id/guide3"
         app:layout_constraintHorizontal_bias="0.5"
-        app:layout_constraintStart_toEndOf="@id/guide3"
+        app:layout_constraintStart_toEndOf="@id/guide2_1"
         app:layout_constraintTop_toBottomOf="@+id/resetBtn" />
 
     <TextView
         android:id="@+id/screenQty"
         android:layout_width="0dp"
         android:layout_height="0dp"
-        android:background="@color/menards_green"
+        android:background="@color/material_dynamic_neutral90"
         android:gravity="center_vertical|center_horizontal"
         android:text="0"
-        android:textColor="@color/white"
+        android:textColor="@color/black"
         android:textSize="20sp"
         app:layout_constraintBottom_toTopOf="@+id/frameQty"
         app:layout_constraintDimensionRatio="1:0.6"
-        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintEnd_toEndOf="@id/guide3"
         app:layout_constraintHorizontal_bias="0.5"
-        app:layout_constraintStart_toEndOf="@id/guide3"
+        app:layout_constraintStart_toEndOf="@id/guide2_1"
         app:layout_constraintTop_toBottomOf="@+id/appCompatButton" />
 
     <TextView
         android:id="@+id/frameQty"
         android:layout_width="0dp"
         android:layout_height="0dp"
-        android:background="@color/menards_green"
+        android:background="@color/material_dynamic_neutral90"
         android:gravity="center_vertical|center_horizontal"
         android:text="0"
-        android:textColor="@color/white"
+        android:textColor="@color/black"
         android:textSize="20sp"
         app:layout_constraintBottom_toTopOf="@+id/splineQty"
         app:layout_constraintDimensionRatio="1:0.6"
-        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintEnd_toEndOf="@id/guide3"
         app:layout_constraintHorizontal_bias="0.5"
-        app:layout_constraintStart_toEndOf="@id/guide3"
+        app:layout_constraintStart_toEndOf="@id/guide2_1"
         app:layout_constraintTop_toBottomOf="@+id/screenQty" />
 
     <TextView
         android:id="@+id/splineQty"
         android:layout_width="0dp"
         android:layout_height="0dp"
-        android:background="@color/menards_green"
+        android:background="@color/material_dynamic_neutral90"
         android:gravity="center_vertical|center_horizontal"
         android:text="0"
-        android:textColor="@color/white"
+        android:textColor="@color/black"
         android:textSize="20sp"
         app:layout_constraintBottom_toTopOf="@+id/cornersQty"
         app:layout_constraintDimensionRatio="1:0.6"
-        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintEnd_toEndOf="@id/guide3"
         app:layout_constraintHorizontal_bias="0.5"
-        app:layout_constraintStart_toEndOf="@id/guide3"
+        app:layout_constraintStart_toEndOf="@id/guide2_1"
         app:layout_constraintTop_toBottomOf="@+id/frameQty" />
 
-    <androidx.appcompat.widget.AppCompatButton
+    <EditText
         android:id="@+id/cornersQty"
         android:layout_width="0dp"
         android:layout_height="0dp"
-        android:background="@color/menards_green"
+        android:background="@color/material_dynamic_neutral90"
         android:gravity="center_vertical|center_horizontal"
-        android:text="0"
-        android:textColor="@color/white"
+        android:hint="0"
+        android:textColor="@color/black"
+        android:textColorHint="@color/black"
         android:textSize="20sp"
         app:layout_constraintBottom_toTopOf="@+id/springQty"
         app:layout_constraintDimensionRatio="1:0.6"
-        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintEnd_toEndOf="@id/guide3"
         app:layout_constraintHorizontal_bias="0.5"
-        app:layout_constraintStart_toEndOf="@id/guide3"
+        app:layout_constraintStart_toEndOf="@id/guide2_1"
         app:layout_constraintTop_toBottomOf="@+id/splineQty" />
 
-    <androidx.appcompat.widget.AppCompatButton
+    <EditText
         android:id="@+id/springQty"
         android:layout_width="0dp"
         android:layout_height="0dp"
-        android:background="@color/menards_green"
+        android:background="@color/material_dynamic_neutral90"
         android:gravity="center_vertical|center_horizontal"
-        android:text="0"
-        android:textColor="@color/white"
+        android:hint="0"
+        android:textColor="@color/black"
+        android:textColorHint="@color/black"
         android:textSize="20sp"
         app:layout_constraintBottom_toTopOf="@+id/plungerQty"
         app:layout_constraintDimensionRatio="1:0.6"
-        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintEnd_toEndOf="@id/guide3"
         app:layout_constraintHorizontal_bias="0.5"
-        app:layout_constraintStart_toEndOf="@id/guide3"
+        app:layout_constraintStart_toEndOf="@id/guide2_1"
         app:layout_constraintTop_toBottomOf="@+id/cornersQty" />
 
-    <androidx.appcompat.widget.AppCompatButton
+    <EditText
         android:id="@+id/plungerQty"
         android:layout_width="0dp"
         android:layout_height="0dp"
-        android:background="@color/menards_green"
+        android:background="@color/material_dynamic_neutral90"
         android:gravity="center_vertical|center_horizontal"
-        android:text="0"
-        android:textColor="@color/white"
+        android:hint="0"
+        android:textColor="@color/black"
+        android:textColorHint="@color/black"
         android:textSize="20sp"
         app:layout_constraintBottom_toTopOf="@+id/spreaderBarQty"
         app:layout_constraintDimensionRatio="1:0.6"
-        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintEnd_toEndOf="@id/guide3"
         app:layout_constraintHorizontal_bias="0.5"
-        app:layout_constraintStart_toEndOf="@id/guide3"
+        app:layout_constraintStart_toEndOf="@id/guide2_1"
         app:layout_constraintTop_toBottomOf="@+id/springQty" />
 
-    <androidx.appcompat.widget.AppCompatButton
+    <EditText
         android:id="@+id/spreaderBarQty"
         android:layout_width="0dp"
         android:layout_height="0dp"
-        android:background="@color/menards_green"
+        android:background="@color/material_dynamic_neutral90"
         android:gravity="center_vertical|center_horizontal"
-        android:text="0"
-        android:textColor="@color/white"
+        android:hint="0"
+        android:textColor="@color/black"
+        android:textColorHint="@color/black"
         android:textSize="20sp"
         app:layout_constraintBottom_toTopOf="@+id/spreaderClipsQty"
         app:layout_constraintDimensionRatio="1:0.6"
-        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintEnd_toEndOf="@id/guide3"
         app:layout_constraintHorizontal_bias="0.5"
-        app:layout_constraintStart_toEndOf="@id/guide3"
+        app:layout_constraintStart_toEndOf="@id/guide2_1"
         app:layout_constraintTop_toBottomOf="@+id/plungerQty" />
 
-    <androidx.appcompat.widget.AppCompatButton
+    <EditText
         android:id="@+id/spreaderClipsQty"
         android:layout_width="0dp"
         android:layout_height="0dp"
-        android:background="@color/menards_green"
+        android:background="@color/material_dynamic_neutral90"
         android:gravity="center_vertical|center_horizontal"
-        android:text="0"
-        android:textColor="@color/white"
+        android:hint="0"
+        android:textColor="@color/black"
+        android:textColorHint="@color/black"
         android:textSize="20sp"
         app:layout_constraintBottom_toTopOf="@+id/pullTabsQty"
         app:layout_constraintDimensionRatio="1:0.6"
-        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintEnd_toEndOf="@id/guide3"
         app:layout_constraintHorizontal_bias="0.5"
-        app:layout_constraintStart_toEndOf="@id/guide3"
+        app:layout_constraintStart_toEndOf="@id/guide2_1"
         app:layout_constraintTop_toBottomOf="@+id/spreaderBarQty" />
 
-    <androidx.appcompat.widget.AppCompatButton
+    <EditText
         android:id="@+id/pullTabsQty"
         android:layout_width="0dp"
         android:layout_height="0dp"
-        android:background="@color/menards_green"
+        android:background="@color/material_dynamic_neutral90"
         android:gravity="center_vertical|center_horizontal"
-        android:text="0"
-        android:textColor="@color/white"
+        android:hint="0"
+        android:textColor="@color/black"
+        android:textColorHint="@color/black"
         android:textSize="20sp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintDimensionRatio="1:0.6"
-        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintEnd_toEndOf="@id/guide3"
         app:layout_constraintHorizontal_bias="0.5"
-        app:layout_constraintStart_toEndOf="@id/guide3"
+        app:layout_constraintStart_toEndOf="@id/guide2_1"
         app:layout_constraintTop_toBottomOf="@+id/spreaderClipsQty" />/"
 
 </androidx.constraintlayout.widget.ConstraintLayout>
