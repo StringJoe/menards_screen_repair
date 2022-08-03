@@ -66,6 +66,10 @@ public class screenMaterials extends AppCompatActivity implements PopupMenu.OnMe
     double getLargestValue, materialCost, laborCost, totalCost;
     int perimeter;
 
+    Boolean plunger = false;
+    Boolean spreader = false;
+    Boolean tab = false;
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -126,27 +130,61 @@ public class screenMaterials extends AppCompatActivity implements PopupMenu.OnMe
         plungerBtn.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                plungerBtn.setText("575-8093");
-                plungerBtn.setEnabled(false);
-                plungerBtn.setBackgroundColor(Color.GRAY);
+
+                if(plunger == false)
+                {
+                    plungerBtn.setText("Plunger Latch");
+                    plungerBtn.setBackgroundColor(Color.GRAY);
+                    plunger = true;
+                }
+                else
+                {
+                    plungerBtn.setText("Material");
+                    plunger = false;
+                    plungerBtn.setBackgroundColor(ResourcesCompat.getColor(getResources(), R.color.second_color, null));
+                }
+
             }
         });
 
         spreaderBarClipsBtn.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                spreaderBarClipsBtn.setText("575-8048");
-                spreaderBarClipsBtn.setEnabled(false);
-                spreaderBarClipsBtn.setBackgroundColor(Color.GRAY);
+
+                if(spreader == false)
+                {
+                    spreaderBarClipsBtn.setText("Spreader Bar Clips");
+                    spreaderBarClipsBtn.setBackgroundColor(Color.GRAY);
+                    spreader = true;
+                }
+                else
+                {
+                    spreaderBarClipsBtn.setText("Material");
+                    spreaderBarClipsBtn.setBackgroundColor(ResourcesCompat.getColor(getResources(), R.color.second_color, null));
+                    spreader = false;
+                }
+
             }
         });
 
         pullTabsBtn.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                pullTabsBtn.setText("575-8027");
-                pullTabsBtn.setEnabled(false);
-                pullTabsBtn.setBackgroundColor(Color.GRAY);
+
+
+                if(tab == false)
+                {
+                    pullTabsBtn.setText("Pull Tabs");
+                    pullTabsBtn.setBackgroundColor(Color.GRAY);
+                    tab = true;
+                }
+                else
+                {
+                    pullTabsBtn.setText("Material");
+                    pullTabsBtn.setBackgroundColor(ResourcesCompat.getColor(getResources(), R.color.second_color, null));
+                    tab = false;
+                }
+
             }
         });
 
@@ -196,43 +234,49 @@ public class screenMaterials extends AppCompatActivity implements PopupMenu.OnMe
         materialCost = 0;
 
         // resetting screen values
-        screenBtn.setText("575-");
+        screenBtn.setText("Material");
 
         // resetting frame values
-        frameBtn.setText("575-");
+        frameBtn.setText("Material");
 
         // resetting spline values
-        splineBtn.setText("575-");
+        splineBtn.setText("Material");
 
         // resetting corner values
-        cornerBtn.setText("575-");
+        cornerBtn.setText("Material");
         cornerQty.setText("");
         cornerQty.setHint("0");
 
         // resetting spring values
         springQty.setText("");
         springQty.setHint("0");
-        springBtn.setText("575-");
+        springBtn.setText("Material");
 
         // resetting plunger latch values
-        plungerBtn.setText("575-");
+        plungerBtn.setText("Material");
+        plungerBtn.setBackgroundColor(ResourcesCompat.getColor(getResources(), R.color.second_color, null));
         plungerQty.setText("");
         plungerQty.setHint("0");
+        plunger = false;
 
         // spreader bar values
         spreaderBarQty.setText("");
         spreaderBarQty.setHint("0");
-        spreaderBarBtn.setText("575-");
+        spreaderBarBtn.setText("Material");
 
         //spreader bar clips values
         spreaderBarClipsQty.setText("");
         spreaderBarClipsQty.setHint("0");
-        spreaderBarClipsBtn.setText("575-");
+        spreaderBarClipsBtn.setText("Material");
+        spreaderBarClipsBtn.setBackgroundColor(ResourcesCompat.getColor(getResources(), R.color.second_color, null));
+        spreader = false;
 
         // pull tabs values
         pullTabsQty.setText("");
         pullTabsQty.setHint("0");
-        pullTabsBtn.setText("575-");
+        pullTabsBtn.setText("Material");
+        pullTabsBtn.setBackgroundColor(ResourcesCompat.getColor(getResources(), R.color.second_color, null));
+        tab = false;
     }
 
     public void calculateScreenFrameSplineQty()
@@ -310,139 +354,73 @@ public class screenMaterials extends AppCompatActivity implements PopupMenu.OnMe
         switch(item.getItemId())
         {
             case R.id.screen1:
-                screenMenuValues("575-8098", charcoalFiber);
+                screenMenuValues("Charcoal Fiberglass", charcoalFiber);
                 return true;
             case R.id.screen2:
-                screenMenuValues("575-8099", brightAluminum);
+                screenMenuValues("Bright Aluminum", brightAluminum);
                 return true;
             case R.id.screen3:
-                screenMenuValues("575-8100", charcoalAluminum);
+                screenMenuValues("Charcoal Aluminum", charcoalAluminum);
                 return true;
             case R.id.screen4:
-                screenMenuValues("575-8101", petDefense);
+                screenMenuValues("Pet Defense", petDefense);
                 return true;
             case R.id.frame1:
-                frameMenuValues("575-8033", frameCost);
+                frameMenuValues("5/16 Aluminum", frameCost);
                 return true;
             case R.id.frame2:
-                frameMenuValues("575-8067", frameCost);
+                frameMenuValues("7/16 Aluminum", frameCost);
                 return true;
             case R.id.frame3:
-                frameMenuValues("575-8034", frameCost);
+                frameMenuValues("5/16 Bronze", frameCost);
                 return true;
             case R.id.frame4:
-                frameMenuValues("575-8038", frameCost);
+                frameMenuValues("7/16 Bronze", frameCost);
                 return true;
             case R.id.frame5:
-                frameMenuValues("575-8035", frameCost);
+                frameMenuValues("5/16 White", frameCost);
                 return true;
             case R.id.frame6:
-                frameMenuValues("575-8029", frameCost);
+                frameMenuValues("7/16 White", frameCost);
                 return true;
             case R.id.black1:
-                splineMenuValues("575-8053", splineCost);
-                return true;
-            case R.id.black2:
-                splineMenuValues("575-8086", splineCost);
-                return true;
-            case R.id.black3:
-                splineMenuValues("575-8054", splineCost);
-                return true;
-            case R.id.black4:
-                splineMenuValues("575-8052", splineCost);
-                return true;
-            case R.id.black5:
-                splineMenuValues("575-8017", splineCost);
-                return true;
-            case R.id.black6:
-                splineMenuValues("575-8088", splineCost);
-                return true;
-            case R.id.black7:
-                splineMenuValues("575-8025", splineCost);
-                return true;
-            case R.id.black8:
-                splineMenuValues("575-8090", splineCost);
-                return true;
-            case R.id.black9:
-                splineMenuValues("575-8078", splineCost);
-                return true;
-            case R.id.black10:
-                splineMenuValues("575-8079", splineCost);
-                return true;
-            case R.id.black11:
-                splineMenuValues("575-8055", splineCost);
-                return true;
-            case R.id.black12:
-                splineMenuValues("575-7019", splineCost);
+                splineMenuValues("Black Spline", splineCost);
                 return true;
             case R.id.gray1:
-                splineMenuValues("575-8018", splineCost);
-                return true;
-            case R.id.gray2:
-                splineMenuValues("575-8087", splineCost);
-                return true;
-            case R.id.gray3:
-                splineMenuValues("575-8019", splineCost);
-                return true;
-            case R.id.gray4:
-                splineMenuValues("575-8020", splineCost);
-                return true;
-            case R.id.gray5:
-                splineMenuValues("575-8021", splineCost);
-                return true;
-            case R.id.gray6:
-                splineMenuValues("575-8089", splineCost);
-                return true;
-            case R.id.gray7:
-                splineMenuValues("575-8026", splineCost);
-                return true;
-            case R.id.gray8:
-                splineMenuValues("575-8091", splineCost);
-                return true;
-            case R.id.gray9:
-                splineMenuValues("575-8081", splineCost);
-                return true;
-            case R.id.gray10:
-                splineMenuValues("575-8092", splineCost);
-                return true;
-            case R.id.gray11:
-                splineMenuValues("575-8023", splineCost);
-                return true;
-            case R.id.gray12:
-                splineMenuValues("575-8024", splineCost);
+                splineMenuValues("Gray Spline", splineCost);
                 return true;
             case R.id.corner1:
-                cornerMenuValues("575-8047");
+                cornerMenuValues("5/16 Aluminum");
                 return true;
             case R.id.corner2:
-                cornerMenuValues("575-8031");
+                cornerMenuValues("7/16 Aluminum");
                 return true;
             case R.id.corner3:
-                cornerMenuValues("575-8045");
+                cornerMenuValues("5/16 Bronze");
                 return true;
             case R.id.corner4:
-                cornerMenuValues("575-8070");
+                cornerMenuValues("7/16 Bronze");
                 return true;
             case R.id.corner5:
-                cornerMenuValues("575-8046");
+                cornerMenuValues("5/16 White");
                 return true;
             case R.id.corner6:
-                cornerMenuValues("575-8039");
+                cornerMenuValues("7/16 White");
                 return true;
             case R.id.flat:
-                springMenuValues("575-8094");
+                springMenuValues("3 1/8\" Flat Spring");
                 return true;
             case R.id.spring:
-                springMenuValues("575-8028");
+                springMenuValues("2 3/4 Corner Spring");
                 return true;
             case R.id.bar1:
-                spreaderBarMenuValues("575-8036");
+                spreaderBarMenuValues("5/8\" Aluminum");
                 return true;
             case R.id.bar2:
-                spreaderBarMenuValues("575-8037");
+                spreaderBarMenuValues("5/8\" Bronze");
                 return true;
             case R.id.bar3:
-                spreaderBarMenuValues("575-8038");
+                spreaderBarMenuValues("5/8\" White");
                 return true;
             default:
                 return false;

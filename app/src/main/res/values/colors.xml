@@ -7,5 +7,8 @@
     <color name="teal_700">#FF018786</color>
     <color name="black">#FF000000</color>
     <color name="white">#FFFFFFFF</color>
-    <color name="menards_green">#0CAA0C</color>
+    <color name="menards_green">#412CF8</color>
+    <color name="second_color">#F1FBF7</color>
+    <color name="background">#26C6DA</color>
+    <color name="grey">#F1FBF7</color>
 </resources>

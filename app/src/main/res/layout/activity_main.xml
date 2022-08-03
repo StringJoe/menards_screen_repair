@@ -4,7 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="@color/white"
+    android:background="@color/background"
     tools:context=".MainActivity">
 
     <androidx.constraintlayout.widget.Guideline
@@ -25,23 +25,24 @@
         android:id="@+id/menuInstructions"
         android:layout_width="0dp"
         android:layout_height="0dp"
-        android:backgroundTint="@color/menards_green"
+        android:backgroundTint="@color/white"
         android:text="Instructions"
-        android:textColor="@color/white"
+        android:textColor="@color/black"
         app:layout_constraintBottom_toTopOf="@+id/sizeBtn"
         app:layout_constraintDimensionRatio="1:0.5"
         app:layout_constraintEnd_toEndOf="@id/guideline3"
         app:layout_constraintHorizontal_bias="0.5"
         app:layout_constraintStart_toEndOf="@id/guideline2"
-        app:layout_constraintTop_toTopOf="parent" />
+        app:layout_constraintTop_toTopOf="parent"
+        />
 
     <Button
         android:id="@+id/sizeBtn"
         android:layout_width="0dp"
         android:layout_height="0dp"
-        android:backgroundTint="@color/menards_green"
+        android:backgroundTint="@color/white"
         android:text="Screen Size"
-        android:textColor="@color/white"
+        android:textColor="@color/black"
         app:layout_constraintBottom_toTopOf="@+id/measurementBtn"
         app:layout_constraintDimensionRatio="1:0.5"
         app:layout_constraintEnd_toEndOf="@id/guideline3"
@@ -53,14 +54,15 @@
         android:id="@+id/measurementBtn"
         android:layout_width="0dp"
         android:layout_height="0dp"
-        android:backgroundTint="@color/menards_green"
+        android:backgroundTint="@color/white"
         android:text="Frame Measurements"
-        android:textColor="@color/white"
+        android:textColor="@color/black"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintDimensionRatio="1:0.5"
         app:layout_constraintEnd_toStartOf="@id/guideline3"
         app:layout_constraintHorizontal_bias="0.5"
         app:layout_constraintStart_toEndOf="@id/guideline2"
-        app:layout_constraintTop_toBottomOf="@+id/sizeBtn" />
+        app:layout_constraintTop_toBottomOf="@+id/sizeBtn"
+        />
 
 </androidx.constraintlayout.widget.ConstraintLayout>

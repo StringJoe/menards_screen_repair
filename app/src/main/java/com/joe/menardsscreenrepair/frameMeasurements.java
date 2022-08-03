@@ -11,6 +11,7 @@ import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
 import android.widget.TextView;
+import android.widget.Toast;
 
 import java.text.DecimalFormat;
 import java.text.Format;
@@ -29,6 +30,8 @@ public class frameMeasurements extends AppCompatActivity {
     double oneOverEight = 1.5;
     double width, length, widthFraction, lengthFraction;
     double cornerToSubtract;
+
+    Boolean isCalcHit = false;
 
     Format myFormatter = new DecimalFormat("##");
 
@@ -86,47 +89,25 @@ public class frameMeasurements extends AppCompatActivity {
         resetBtn.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                width = 0;
-                length = 0;
-
-                screenWidth.setText("");
-                screenLength.setText("");
-                screenWidth.setHint("Enter Screen Width");
-                screenLength.setHint("Enter Screen Length");
-
-                totalWidth.setText("Cut width to: ");
-                totalLength.setText("Cut Length to: ");
-
-                cornerToSubtract = 0;
-                smallCornerBtn.setTextColor(Color.WHITE);
-                bigCornerBtn.setTextColor(Color.WHITE);
-
-                lengthCountFraction.setText("0/16");
-                widthCountFraction.setText("0/16");
-
-                lengthCount = 0;
-                widthCount = 0;
+                resetValues();
             }
         });
 
         calcBtn.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                width = Double.parseDouble(screenWidth.getText().toString());
-                length = Double.parseDouble(screenLength.getText().toString());
-                /*
-                width = width - cornerToSubtract;
+                //width = Double.parseDouble(screenWidth.getText().toString());
+                //length = Double.parseDouble(screenLength.getText().toString());
 
-                widthFraction = width - (long) width;
-
-                width = width - widthFraction;
-                widthFraction = widthFraction / 0.0625;
-                widthFraction = (int)widthFraction;*/
-
-                calculateLengthWidth();
-
-                totalWidth.setText("Width: " + myFormatter.format(width) + " " + myFormatter.format(widthFraction) + "/16\"");
-                totalLength.setText("Length: " + myFormatter.format(length) + " " + myFormatter.format(lengthFraction) + "/16\"");
+                if(isCalcHit == false)
+                {
+                    isCalcHit = true;
+                    grabButtonValues();
+                }
+                else
+                {
+                    Toast.makeText(frameMeasurements.this, "Please hit reset button", Toast.LENGTH_SHORT).show();
+                }
             }
         });
 
@@ -136,8 +117,8 @@ public class frameMeasurements extends AppCompatActivity {
                 cornerToSubtract = thirteenOver;
                 bigCornerBtn.setEnabled(false);
                 smallCornerBtn.setEnabled(true);
-                smallCornerBtn.setTextColor(Color.WHITE);
-                bigCornerBtn.setTextColor(0xFF03DAC5);
+                smallCornerBtn.setTextColor(Color.BLACK);
+                bigCornerBtn.setTextColor(Color.GRAY);
             }
         });
 
@@ -147,8 +128,8 @@ public class frameMeasurements extends AppCompatActivity {
                 cornerToSubtract = oneOverEight;
                 bigCornerBtn.setEnabled(true);
                 smallCornerBtn.setEnabled(false);
-                smallCornerBtn.setTextColor(0xFF03DAC5);
-                bigCornerBtn.setTextColor(Color.WHITE);
+                smallCornerBtn.setTextColor(Color.GRAY);
+                bigCornerBtn.setTextColor(Color.BLACK);
             }
         });
 
@@ -228,4 +209,63 @@ public class frameMeasurements extends AppCompatActivity {
                 .show();
         alertDialog.create();
     }
+
+    public void resetValues()
+    {
+
+        isCalcHit = false;
+
+        width = 0;
+        length = 0;
+
+        screenWidth.setText("");
+        screenLength.setText("");
+        screenWidth.setHint("Enter Screen Width");
+        screenLength.setHint("Enter Screen Length");
+
+        totalWidth.setText("Cut width to: ");
+        totalLength.setText("Cut Length to: ");
+
+        cornerToSubtract = 0;
+        smallCornerBtn.setTextColor(Color.BLACK);
+        bigCornerBtn.setTextColor(Color.BLACK);
+        bigCornerBtn.setEnabled(true);
+        smallCornerBtn.setEnabled(true);
+
+        lengthCountFraction.setText("0/16\"");
+        widthCountFraction.setText("0/16\"");
+
+
+        lengthCount = 0;
+        widthCount = 0;
+    }
+
+    public void grabButtonValues()
+    {
+
+        // get width and length from editText components
+        if(screenWidth.getText().toString().equals("") && screenLength.getText().toString().equals(""))
+        {
+            Toast.makeText(frameMeasurements.this, "You need to enter a width and length", Toast.LENGTH_SHORT).show();
+        }
+        else if(screenWidth.getText().toString().equals(""))
+        {
+            Toast.makeText(frameMeasurements.this, "You need to enter a width", Toast.LENGTH_SHORT).show();
+        }
+        else if(screenLength.getText().toString().equals(""))
+        {
+            Toast.makeText(frameMeasurements.this, "You need to enter a length", Toast.LENGTH_SHORT).show();
+        }
+        else
+        {
+            width = Integer.parseInt(screenWidth.getText().toString());
+            length = Integer.parseInt(screenLength.getText().toString());
+
+            calculateLengthWidth();
+
+            totalWidth.setText("Width: " + myFormatter.format(width) + " " + myFormatter.format(widthFraction) + "/16\"");
+            totalLength.setText("Length: " + myFormatter.format(length) + " " + myFormatter.format(lengthFraction) + "/16\"");
+        }
+    }
+
 }

@@ -99,11 +99,16 @@ public class screenSize extends AppCompatActivity {
             length = Integer.parseInt(screenLength.getText().toString());
             equalsBtn.setEnabled(false);
             equalsBtn.setBackgroundColor(Color.GRAY);
+
+            //calculate perimeter for spline values
+            perimeter = (width*2) + (length*2);
+
+            // calculate square footage of screen
+            squareFootage = (width * length) / 144;
         }
 
 
-        //calculate perimeter for spline values
-        perimeter = (width*2) + (length*2);
+
 
         // calculate whether screen is < or > 49 inches
         if(width < 49 && length < 49)
@@ -134,20 +139,20 @@ public class screenSize extends AppCompatActivity {
             }
         }
 
-        // calculate square footage of screen
-        squareFootage = (width * length) / 144;
+
+
 
         // calculate labor cost based on square footage
-        if(squareFootage > 16)
+        if(squareFootage >= 16)
         {
-            laborCost += 20;
+            laborCost = 20;
         }
-        else if(squareFootage < 16)
+        else if(squareFootage < 16 && squareFootage > 0)
         {
-            laborCost += 10;
+            laborCost = 10;
         }
 
-        squareFt.setText("Sq ft: "+Math.round(squareFootage));
+        squareFt.setText("Sq Ft: "+Math.round(squareFootage));
 
     }
 
@@ -158,13 +163,13 @@ public class screenSize extends AppCompatActivity {
         screenWidth.setHint("Enter Width");
         screenLength.setHint("Enter Length");
 
-        squareFt.setText("Sq ft: 0");
+        squareFt.setText("Sq Ft: 0");
 
         laborCost = 0;
         width = 0;
         length = 0;
         squareFootage = 0;
         equalsBtn.setEnabled(true);
-        equalsBtn.setBackgroundColor(ResourcesCompat.getColor(getResources(), R.color.menards_green, null));
+        equalsBtn.setBackgroundColor(ResourcesCompat.getColor(getResources(), R.color.grey, null));
     }
 }
